@@ -1,0 +1,23 @@
+%flexCenter{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%flexSpaceBetween{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+%flexStart{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+$Green: #5bc98c;
+$DarkGreen: #006935;
+$Honeydew: #F0FFF0;
+$footer: #2d3237;
+$copyright: #23282d;

@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  background: #fff; }
+
+.ThreeButton, .ContactUs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.Images img {
+  height: 25rem; }
+
+.container {
+  padding: 0; }
+
+.ThreeButton {
+  width: 100%;
+  height: 20%;
+  padding: 3% 11%; }
+  .ThreeButton button {
+    width: 30%;
+    background: #006935;
+    color: #fff;
+    border-color: #006935;
+    padding: 1% 0; }
+  .ThreeButton button:hover {
+    color: #000;
+    background: #5bc98c;
+    border-color: #5bc98c; }
+
+.ThreeInfo {
+  height: 20%; }
+  .ThreeInfo .row {
+    width: 100%;
+    margin: 0; }
+    .ThreeInfo .row p {
+      width: 100%;
+      height: 10rem;
+      word-break: break-word;
+      overflow-x: scroll; }
+
+.ContactUs {
+  width: 100%;
+  padding: 3% 11%;
+  background: #006935;
+  margin-top: 2%; }
+  .ContactUs p {
+    background: #006935;
+    color: #fff;
+    margin: 0; }
+  .ContactUs .ContactBtn {
+    width: 20%;
+    background: #006935;
+    border-color: #fff;
+    color: #fff; }
+  .ContactUs .ContactBtn:hover {
+    color: #000;
+    background: #5bc98c;
+    border-color: #5bc98c; }
+
+.ThreeCoach {
+  padding: 3% 0;
+  background: #F0FFF0; }
+  .ThreeCoach .row {
+    background: #F0FFF0; }
+    .ThreeCoach .row .col-xs-12, .ThreeCoach .row .col-sm-4 {
+      background: #F0FFF0; }
+    .ThreeCoach .row .card img {
+      height: 17rem; }
+    .ThreeCoach .row .card .card-body {
+      padding: 2% 0 0 2%; }
+      .ThreeCoach .row .card .card-body .card-text {
+        height: 18rem; }
+
+/*# sourceMappingURL=Home.css.map */

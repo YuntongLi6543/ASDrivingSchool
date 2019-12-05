@@ -1,0 +1,32 @@
+@import'Style.scss'; 
+@import'Variables.scss';
+
+
+.Nav{
+	height: 40%;
+
+
+	.TopNav{
+		height: 10%;
+		background:$DarkGreen;
+		padding: 0 11%;
+
+		p{
+			background:$DarkGreen;
+			color: #fff;
+		}
+	}
+
+	nav{
+		height: 20%;
+
+		.container{
+
+			p{
+				display: inline-block;
+				margin: 0;
+				color: $DarkGreen;
+			}
+		}
+	}
+}
