@@ -10,12 +10,8 @@
   justify-content: space-between;
   align-items: center; }
 
-.carousel-indicators li {
-  background-color: #999;
-  background-color: rgba(70, 70, 70, 0.25); }
-
-.carousel-indicators .active {
-  background-color: #444; }
+.carousel-indicators {
+  background-color: transparent; }
 
 .Images img {
   height: 25rem; }
