@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import '../scss/Home.scss';
 
 
@@ -42,22 +43,14 @@ export default class Home extends Component {
 				<div className="container ThreeInfo">
 					<div className="row">
 						<div className="col-xs-12 col-sm-4">
-							<p>Our program is a ministry-approved beginner driver education course. This program is designed to enhance the students’ driving safety knowledge and allow students to practice correct driving techniques on the road while enforcing awareness and judgment as a responsible driver.
-
-							After completing the course, students will be entered into the Driver Education System (DES) learning record. The system will automatically generate a personal driving history referred to as Driver Licence History (DLH).
-
-							This course not only shorten the road test (G1 Exit G2) waiting period by 4 months (8 months after the G1 written tests), but also reduces your insurance costs.
-
-							Teaching material is of Ministry standards and includes: video animation, case by case breakdown method, teacher-student interaction, a total of 40 hours course: 20 hours in-classroom (a total of 8 classes), 10 hours of homework and 10 hours in-vehicle practice.
-
-							Full Course- Regular Package
-							Full Course-Plus Package</p>
+							<p className="Info">Our program is a ministry-approved beginner driver education course. This program is designed to enhance the students’ driving safety knowledge and allow students to practice correct driving techniques on the road while enforcing awareness and judgment as a responsible driver.
+							</p>
 						</div>
 						<div className="col-xs-12 col-sm-4">
-							<p>INfo2</p>
+							<p className="Info">INfo2</p>
 						</div>
 						<div className="col-xs-12 col-sm-4">
-							<p>INfo3</p>
+							<p className="Info">INfo3</p>
 						</div>
 					</div>
 				</div>
@@ -75,15 +68,20 @@ export default class Home extends Component {
 								<div className="card">
 								  <img src="coach-zhang.png" className="card-img-top" alt="..." />
 								  <div className="card-body">
-								    <p className="card-text">Instructor Zhang is an excellent and experienced instructor registered by the Ontario government. He is energetic, patient and detail-oriented, and proficient in traffic regulations and road test skills in Ontario. And also, he is good at using easy-to-grasp and efficient visualized teaching methods to enable students to master Essentials of safe driving. In addition, he usually implements intensive training before the test according to the characteristics of the test centers, which results in a high passing rate. Therefore, students gave him wonderful reviews and feedback. Tel：6479852174</p>
-								  </div>
+								    <p className="card-text">Instructor Zhang is an excellent and experienced instructor registered by the Ontario government. 
+								    </p>
+								    <Button className="btn-link"><Link className="nav-link" to="/about-us">More</Link>
+								    </Button>
+								    </div>
 								</div>
 							</div>
 							<div className="col-xs-12 col-sm-4">
 								<div className="card">
 								  <img src="coach-zhou.png" className="card-img-top" alt="..." />
 								  <div className="card-body">
-								    <p className="card-text">Instructor Zhou is an excellent driving professional with more than 30 years of driving experience and registered with Ontario government. He is expert, responsible, patient and enthusiastic. By making good use of unique training methods, he can ensure that students master safe driving skills in a short time.  He is also familiar with the key points of road test, and usually makes appropriate arrangement of road tests in small towns so that the road test passing rate is over 98%. Tel：6479246776</p>
+								    <p className="card-text">Instructor Zhou is an excellent driving professional with more than 30 years of driving experience and registered with Ontario government.  patient and enthusiastic. By making good use of unique training methods, he can ensure that students master safe driving skills in a short time.</p>
+								  	<Button className="btn-link"><Link className="nav-link" to="/about-us">More</Link>
+								    </Button>
 								  </div>
 								</div>
 							</div>
@@ -91,7 +89,9 @@ export default class Home extends Component {
 								<div className="card">
 								  <img src="coach-hao.png" className="card-img-top" alt="..." />
 								  <div className="card-body">
-								    <p className="card-text">As an excellent Instructor of both in-car and in-class instruction, instructor Hao is very experienced, responsible, and very knowledgeable with road tests and traffic regulations.  He can accurately grasp the characteristics of each student, and implement targeted road training and theoretical teaching accordingly.  And also, he explains and analyses difficult and confusing points by using pictures, videos and other methods, which won a lot of praise from students. Tel：6475199286</p>
+								    <p className="card-text">As an excellent Instructor of both in-car and in-class instruction, instructor Hao is very experienced, responsible, and very knowledgeable with road tests and traffic regulations.</p>
+								  	<Button className="btn-link"><Link className="nav-link" to="/about-us">More</Link>
+								    </Button>
 								  </div>
 								</div>
 							</div>

@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  background: #fff; }
+
+html, body {
+  width: 100%; }
+
+.Image {
+  height: 320px;
+  margin-bottom: 5%; }
+
+.title {
+  text-align: center;
+  padding: 2% 0 4% 0; }
+
+.content {
+  padding: 0 2%;
+  border: 1px solid red; }
+
+.AboutUs .ASTitle {
+  padding: 3% 0;
+  border-bottom: 1px solid #ddd; }
+  .AboutUs .ASTitle .AU-Header {
+    margin: 0 auto; }
+  .AboutUs .ASTitle .Image {
+    height: 300px; }
+
+/*# sourceMappingURL=AboutUs.css.map */

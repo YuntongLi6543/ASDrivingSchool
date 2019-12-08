@@ -6,19 +6,44 @@
   background: #fff; }
 
 .Nav {
-  height: 40%; }
+  height: 40%;
+  border-bottom: 1px solid #ddd; }
   .Nav .TopNav {
     height: 10%;
     background: #006935;
     padding: 0 11%; }
-    .Nav .TopNav p {
+    .Nav .TopNav .Language {
       background: #006935;
       color: #fff; }
-  .Nav nav {
+  .Nav .NavBar {
     height: 20%; }
-    .Nav nav .container p {
-      display: inline-block;
+    .Nav .NavBar .Brand {
+      width: 55%;
+      display: block;
       margin: 0;
-      color: #006935; }
+      display: flex; }
+      @media (min-width: 426px) and (max-width: 768px) {
+        .Nav .NavBar .Brand {
+          width: 80%; } }
+      @media (max-width: 426px) {
+        .Nav .NavBar .Brand {
+          width: 80%; } }
+      .Nav .NavBar .Brand .LogoImage {
+        float: left; }
+      .Nav .NavBar .Brand .SchoolName {
+        align-self: center;
+        margin: 0;
+        display: inline-block;
+        float: left;
+        color: #006935;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        white-space: pre-line; }
+        @media (min-width: 426px) and (max-width: 768px) {
+          .Nav .NavBar .Brand .SchoolName {
+            width: 70%; } }
+        @media (max-width: 426px) {
+          .Nav .NavBar .Brand .SchoolName {
+            width: 60%; } }
 
 /*# sourceMappingURL=TopBar.css.map */

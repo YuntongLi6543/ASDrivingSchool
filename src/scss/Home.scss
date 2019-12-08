@@ -21,7 +21,7 @@
 	padding: 3% 11%;
 	@extend %flexSpaceBetween;
 
-	button{
+	.btn{
 		width: 30%;
 		background: $DarkGreen;
 		color: #fff;
@@ -29,7 +29,7 @@
 		padding: 1% 0;
 	}
 
-	button:hover{
+	.btn:hover{
 		color: #000;
 		background: $Green;
 		border-color: $Green;
@@ -44,11 +44,11 @@
 		width: 100%;
 		margin: 0;
 
-		p{
+		.Info{
 			width: 100%;
-			height: 10rem;
+			height: 13rem;
 			word-break:break-word;
-			overflow-x: scroll;
+			// overflow-x: scroll;
 		}
 
 		
@@ -68,7 +68,7 @@
 		margin: 0;
 	}
 	.ContactBtn{
-		width: 20%;
+		width: 25%;
 		background: $DarkGreen;
 		border-color: #fff;
 		color: #fff;
@@ -99,9 +99,22 @@
 			}
 
 			.card-body{
-				padding: 2% 0 0 2%;
+				padding: 0;
 				.card-text{
-					height: 18rem;
+					height: 8rem;
+					padding:2% 0 0 2%;;
+				}
+				.btn-link{
+					width: 100%;
+					background:$DarkGreen;
+					border-color:$DarkGreen;
+					.nav-link{
+						color:#fff;
+					}
+					.nav-link:hover{
+						text-decoration: none;
+						// color:#fff;
+					}
 				}
 			}
 		}

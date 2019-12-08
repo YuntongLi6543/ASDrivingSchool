@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
-
+// import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
+// import 'typeface-roboto';
 
 import TopBar from './schoolApp/TopBar.js';
 import Home from './schoolApp/Home.js';

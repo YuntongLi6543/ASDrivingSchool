@@ -1,0 +1,36 @@
+@import'Style.scss'; 
+@import'Variables.scss';
+
+.Image{
+  height: 320px;
+  margin-bottom: 5%;
+}
+
+.title{
+  text-align: center;
+  padding: 2% 0 4% 0;     
+}
+
+.content{
+  padding: 0 2%;
+  border:1px solid red;
+}
+  
+
+.AboutUs{
+
+  .ASTitle{
+    padding:3% 0;
+    border-bottom: 1px solid #ddd;
+
+    .AU-Header{
+        margin: 0 auto;
+    }
+
+    .Image{
+      height: 300px;
+    }
+  }
+}
+
+

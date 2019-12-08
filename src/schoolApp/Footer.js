@@ -12,11 +12,11 @@ export default class Footer extends Component {
 						<div className="row">
 					      	<div className="col-md-5 mt-md-0 mt-3">
 					        	<h5 className="text-uppercase">Head Officer</h5>
-					        	<p>Office Address 
+					        	<p>4438 Sheppard Ave. E , unit 319, Toronto Ontario M1S 1V2
 					        	<br></br> 
-					        	Tel
+					        	Tel: 647-760-9358/ 647-519-9286
 					        	<br></br>
-					        	Email
+					        	Email: journey9285@yahoo.com
 					        	</p>
 					      	</div>
 
