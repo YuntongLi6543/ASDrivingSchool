@@ -38,7 +38,7 @@ class App extends Component {
               English
             </button>
             <button onClick={() => this.handleClick('zh')} >
-              Chinese
+              中文
             </button>
           </nav>
           <h3>{t('languageExample')}</h3>
