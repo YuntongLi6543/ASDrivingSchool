@@ -1,0 +1,33 @@
+@import'Style.scss'; 
+@import'Variables.scss';
+
+
+.page-footer{
+	background:$footer;
+	
+
+	.container-fluid{
+		padding:1% 8%;
+	}
+
+	.container-fluid,.row,hr,
+	.col-md-6,.mt-md-0,.mt-3,
+	.col-md-3,.mb-md-0,.mb-3,
+	.col-md-3, .mb-md-0, .mb-3,h5,p, ul li{
+		background:$footer;
+	}
+
+	h5,p,ul li{
+		color:#fff;
+	}
+
+	.ContactBtn{
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.footer-copyright{
+		background: $copyright;
+		color:#fff;
+	}
+}

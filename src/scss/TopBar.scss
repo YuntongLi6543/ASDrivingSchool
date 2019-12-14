@@ -1,0 +1,64 @@
+@import'Style.scss'; 
+@import'Variables.scss';
+
+
+.Nav{
+	height: 40%;
+	border-bottom:1px solid #ddd;
+
+
+	.TopNav{
+		height: 10%;
+		background:$DarkGreen;
+		padding: 0 11%;
+
+		.Language{
+			background:$DarkGreen;
+			color: #fff;
+		}
+	}
+
+
+	.NavBar{
+		height: 20%;
+
+		.Brand{
+			width: 55%;
+			display:block;
+			margin: 0;
+			display:flex;
+
+			@media (min-width:426px) and (max-width: 768px){
+				width:80%;
+			}
+
+			@media (max-width:426px) {
+				width:80%;
+			}
+
+			.LogoImage{
+				float:left;
+			}
+
+			.SchoolName{
+				align-self: center;
+				margin: 0;
+				display:inline-block;
+				float:left;
+				color: $DarkGreen;
+				overflow-wrap: break-word;
+				word-wrap:break-word;
+  				white-space: pre-line;
+
+  				@media (min-width:426px) and (max-width: 768px){
+					width:70%;
+				}
+
+				@media (max-width:426px) {
+					width:60%;
+				}
+			}
+		}
+	}
+}
+
