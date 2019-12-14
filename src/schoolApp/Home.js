@@ -10,7 +10,7 @@ export default class Home extends Component {
         return (
         	<div>
 	            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-				  <ol class="carousel-indicators">
+				  <ol className="carousel-indicators">
 				    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
 				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 				    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
