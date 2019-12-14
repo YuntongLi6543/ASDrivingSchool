@@ -1,0 +1,24 @@
+#mainTitle{
+    color :  #d1e0d9;
+    text-align: center;
+    padding: 1%;
+    border-bottom: 2px solid rgb(79, 141, 79);
+    background-color:    #006935;
+
+}
+
+#firstCourse #courseTitle1{
+    text-align: left;
+    padding: 1%;
+    border-bottom: 2px solid  #d9e7e0;
+}
+#secondCourse #courseTitle2{
+    text-align: left;
+    padding: 1%;
+    border-bottom: 2px solid  #d9e7e0;
+}
+#thirdCourse #courseTitle3{
+    text-align: left;
+    padding: 1%;
+    border-bottom: 2px solid  #d9e7e0;
+}
