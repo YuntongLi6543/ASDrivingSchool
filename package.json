@@ -43,7 +43,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "db" : "json-server contact.json --watch",
+    "db": "json-server contact.json --watch",
     "backend": "node api/contact/index.js"
   },
   "eslintConfig": {
