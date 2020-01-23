@@ -9,7 +9,7 @@ import i18next from 'i18next';
 class TopBar extends Component {
 
   handleClick(lang) {
-    i18next.changeLanguage(lang)
+    i18next.changeLanguage(lang);
   }
 
   render() {
@@ -19,7 +19,13 @@ class TopBar extends Component {
       // Top Nav 
       <div className="Nav">
         <div className="TopNav">
-          <p className="Language">language</p>
+          {/* <p className="Language">language</p> */}
+          <button onClick={() => this.handleClick('en')} >
+              English
+            </button>
+            <button onClick={() => this.handleClick('zh')} >
+              中文
+            </button>
         </div>
         <nav className="navbar navbar-expand-lg navbar-light static-top NavBar">
           <Container>
