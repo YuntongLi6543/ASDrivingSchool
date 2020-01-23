@@ -1,9 +1,60 @@
 {
-    "languageExample": "English example",
-    "allSuccessfulDrivingSchool": "All successful driving school",
-    "home": "Home",
-    "aboutUs": "About Us",
-    "courses": "Courses",
-    "onlineTranslation": "Online Translation",
-    "onlineResources": "Online Resources"
+    "topBar": {
+        "allSuccessfulDrivingSchool": "All successful driving school",
+        "home": "Home",
+        "aboutUs": "About Us",
+        "courses": "Courses",
+        "onlineTranslation": "Online Translation",
+        "onlineResources": "Online Resources"
+    },
+
+    "aboutUs": {
+        "aboutASDrivingSchool": "About AS Driving School",
+        "aboutASDrivingSchoolContent": {
+            "para1": "All Successful Driving School is one of the MTO approved and specialized driving schools and it is dedicated to helping students achieve their dreams to become a skilled, responsible and safe driver by providing visualized, student-centered and small-sized quality in-class lessons, and one-to-one in vehicle advanced training.",
+            "para2": "Instructors in our driving school, who have many years of experience and familiar with the routes and features of all the drive test centers, are very patient, helpful and dedicated.",
+            "para3": "The school also provides additional services, such as free G1 tutoring & practice test, notarization and translation of licenses, vehicle purchase and insurance, International licence and car accident inquiry, etc"
+        },
+        "featuredInstructors": "Featured Instructors",
+        "coachZhang": {
+            "para1": "Instructor Zhang is an excellent and experienced instructor registered by the Ontario government. He is energetic, patient and detail-oriented, and proficient in traffic regulations and road test skills in Ontario.",
+            "para2": "And also, he is good at using easy-to-grasp and efficient visualized teaching methods to enable students to master Essentials of safe driving.",
+            "para3": "In addition, he usually implements intensive training before the test according to the characteristics of the test centers, which results in a high passing rate. Therefore, students gave him wonderful reviews and feedback.",
+            "tel": "Tel：6479852174"
+        },
+        "coachZhou": {
+            "para1": "Instructor Zhou is an excellent driving professional with more than 30 years of driving experience and registered with Ontario government. He is expert, responsible, patient and enthusiastic.",
+            "para2": "By making good use of unique training methods, he can ensure that students master safe driving skills in a short time. He is also familiar with the key points of road test, and usually makes appropriate arrangement of road tests in small towns so that the road test passing rate is over 98%.",
+            "tel": "Tel：6479246776"
+        },
+        "coachHao": {
+            "para1": "As an excellent Instructor of both in-car and in-class instruction, instructor Hao is very experienced, responsible, and very knowledgeable with road tests and traffic regulations. He can accurately grasp the characteristics of each student, and implement targeted road training and theoretical teaching accordingly.",
+            "para2": "And also, he explains and analyses difficult and confusing points by using pictures, videos and other methods, which won a lot of praise from students.",
+            "tel": "Tel：6475199286"
+        }
+    },
+
+    "footer":{
+        "headOfficer": "Head Officer",
+        "address": "4438 Sheppard Ave. E , unit 319, Toronto Ontario M1S 1V2",
+        "tel": "Tel: 647-760-9358/ 647-519-9286",
+        "email": "Email: journey9285@yahoo.com",
+        "openingHours": "Opening Hours",
+        "mondayToFriday": "Monday-Friday: 9a.m. – 7p.m",
+        "saturday": "Saturday: 8:45a.m. – 5p.m",
+        "sunday": "Sunday: 8:45a.m. – 6p.m",
+        "information": "Information",
+        "courses": "Courses",
+        "aboutUs": "About Us",
+        "contactUs": "Contact Us"
+    },
+
+    "contactUs": {
+        "contactForm": "CONTACT FORM",
+        "yourName": "Your Name",
+        "emailAddress": "Email Address",
+        "message": "Message",
+        "submit": "Submit",
+        "thankYou": "Thank you for contcting us." 
+    }
 }

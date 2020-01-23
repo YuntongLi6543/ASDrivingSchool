@@ -5,12 +5,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import axios from "axios";
-
 import '../scss/ContactUs.scss';
+
+import { withTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 const API_PATH = 'http://localhost:3000/myData';
 
-export default class ContactUs extends Component {
+class ContactUs extends Component {
 	constructor(props) {
 	  super(props);
 	  this.state = {
@@ -19,6 +21,10 @@ export default class ContactUs extends Component {
         mailSent: false,
       	error: null
 	  }
+	}
+
+	handleClick(lang) {
+		i18next.changeLanguage(lang);
 	}
 
 	handleValidation(){
@@ -109,7 +115,7 @@ export default class ContactUs extends Component {
     }
 
   render() {
-
+	const { t } = this.props;
     return (
       <div>
       <Container>
@@ -121,14 +127,14 @@ export default class ContactUs extends Component {
       			</div>
       		</div>
 
-      		<h3>CONTACT FORM</h3>
+      		<h3>{t('contactUs.contactForm')}</h3>
 	        <Form method="POST">
 		        <Form.Group as={Row} controlId="formHorizontalPassword">
 				    <Form.Label column sm={2}>
-				      Your Name
+					{t('contactUs.yourName')}
 				    </Form.Label>
 				    <Col sm={10}>
-				       	<Form.Control type="name" placeholder="Your Name" 
+				       	<Form.Control type="name"
 		    			onChange={this.handleChange.bind(this, "name")}
 		    			value={this.state.fields["name"] || ''}
 				      	/>
@@ -138,10 +144,10 @@ export default class ContactUs extends Component {
 
 				<Form.Group as={Row} controlId="formHorizontalEmail">
 				    <Form.Label column sm={2}>
-				      Email
+						{t('contactUs.emailAddress')}
 				    </Form.Label>
 				    <Col sm={10}>
-				       	<Form.Control type="email" placeholder="Email" 
+				       	<Form.Control type="email"
 		    			onChange={this.handleChange.bind(this, "email")}
 		    			value={this.state.fields["email"] || ''}
 				      	/>
@@ -151,7 +157,7 @@ export default class ContactUs extends Component {
 
 				<Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
 				  	<Form.Label column sm={2}>
-				      Message
+				      {t('contactUs.message')}
 				    </Form.Label>
 				    <Col sm={10}>
 				    	<Form.Control as="textarea" rows="3" 
@@ -164,11 +170,11 @@ export default class ContactUs extends Component {
 
 				<Form.Group as={Row}>
 				    <Col sm={{ span: 10, offset: 2 }}>
-				      <Button type="submit" onClick={e => this.handleFormSubmit(e)}>Submit</Button>
+				      <Button type="submit" onClick={e => this.handleFormSubmit(e)}>{t('contactUs.submit')}</Button>
 				    </Col>
 				</Form.Group>
 			  	<div>
-				  {this.state.mailSent &&<div>Thank you for contcting us.</div>}
+				  {this.state.mailSent &&<div>{t('contactUs.thankYou')}</div>}
 				</div>
 			</Form>
 		</Container>
@@ -176,3 +182,4 @@ export default class ContactUs extends Component {
     );
   }
 }
+export default withTranslation()(ContactUs);
