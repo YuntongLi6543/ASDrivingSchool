@@ -4,11 +4,8 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.7.2",
-<<<<<<< HEAD
     "@material-ui/icons": "^4.5.1",
     "axios": "^0.19.0",
-=======
->>>>>>> a0f5835... fix
     "bootstrap": "^4.4.1",
     "cors": "^2.8.5",
     "emailjs": "^2.2.0",
@@ -16,16 +13,10 @@
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "google-map-react": "^1.1.5",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "google-maps-react": "^2.0.2",
-=======
->>>>>>> a0f5835... fix
-=======
     "i18next": "^19.0.1",
     "i18next-browser-languagedetector": "^4.0.1",
     "i18next-xhr-backend": "^3.2.2",
->>>>>>> 4d95f13... new language system
     "jquery": "^3.4.1",
     "json-server": "^0.15.1",
     "nodemailer": "^6.4.1",
