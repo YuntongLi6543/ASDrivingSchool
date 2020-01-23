@@ -31,7 +31,7 @@ class TopBar extends Component {
           <Container>
             <Link className="navbar-brand Brand col-xs-8 col-md-6" to="/home">
               <img className="LogoImage" src="LOGO.png" width="100" height="100" alt="" />
-              <p className="text-uppercase SchoolName">{t('allSuccessfulDrivingSchool')}</p>
+              <p className="text-uppercase SchoolName">{t('topBar.allSuccessfulDrivingSchool')}</p>
 
             </Link>
 
@@ -42,21 +42,21 @@ class TopBar extends Component {
             <div className="collapse navbar-collapse" id="navbarResponsive">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/home">{t("home")}
+                  <Link className="nav-link" to="/home">{t("topBar.home")}
                   <span className="sr-only">(current)</span>
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about-us">{t("aboutUs")}</Link>
+                  <Link className="nav-link" to="/about-us">{t("topBar.aboutUs")}</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/courses">{t("courses")}</Link>
+                  <Link className="nav-link" to="/courses">{t("topBar.courses")}</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/online-translation">{t("onlineTranslation")}</Link>
+                  <Link className="nav-link" to="/online-translation">{t("topBar.onlineTranslation")}</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/online-resources">{t("onlineResources")}</Link>
+                  <Link className="nav-link" to="/online-resources">{t("topBar.onlineResources")}</Link>
                 </li>
               </ul>
             </div>

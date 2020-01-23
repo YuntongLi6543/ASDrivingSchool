@@ -2,51 +2,59 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import '../scss/Footer.scss';
 
-export default class Footer extends Component {
+import { withTranslation } from 'react-i18next';
+import i18next from 'i18next';
+
+class Footer extends Component {
+
+	handleClick(lang) {
+		i18next.changeLanguage(lang);
+	}
 
     render() {
+		const { t } = this.props;
         return (
             <div>
 				<footer className="page-footer font-small pt-4">
 					<div className="container-fluid text-center text-md-left">
 						<div className="row">
 					      	<div className="col-md-5 mt-md-0 mt-3">
-					        	<h5 className="text-uppercase">Head Officer</h5>
-					        	<p>4438 Sheppard Ave. E , unit 319, Toronto Ontario M1S 1V2
+					        	<h5 className="text-uppercase">{t('footer.headOfficer')}</h5>
+					        	<p>{t('footer.address')}
 					        	<br></br> 
-					        	Tel: 647-760-9358/ 647-519-9286
+					        	{t('footer.tel')}
 					        	<br></br>
-					        	Email: journey9285@yahoo.com
+					        	{t('footer.email')}
 					        	</p>
 					      	</div>
 
 					      <hr className="clearfix w-100 d-md-none pb-3" />
 					      <div className="col-md-4 mb-md-0 mb-3">
-						        <h5 className="text-uppercase">Opening Hours</h5>
+						        <h5 className="text-uppercase">{t('footer.openingHours')}</h5>
 						        <ul className="list-unstyled">
 						          <li>
-						            Monday-Friday: x:00-x:00
+								  {t('footer.mondayToFriday')}
 						          </li>
 						          <li>
-						            Saturday: x:00-x:00
+								  {t('footer.saturday')}
 						          </li>
 						          <li>
-						            Sunday: x:00-x:00
+								  {t('footer.sunday')}
 						          </li>
 						        </ul>
 					      </div>
 
 					      	<div className="col-md-3 mb-md-0 mb-3">
-					        	<h5 className="text-uppercase">Information</h5>
+					        	<h5 className="text-uppercase">{t('footer.information')}</h5>
 						        <ul className="list-unstyled">
 						          <li>
-						            <Link className="ContactBtn" to="/contact-us">Contact Us</Link>
+						            <Link className="ContactBtn" to="/courses">{t('footer.courses')}</Link>
 						          </li>
 						          <li>
-						          	<Link className="ContactBtn" to="/contact-us">Contact Us</Link>
+						          	<Link className="ContactBtn" to="/about-us">{t('footer.aboutUs')}</Link>
 						          </li>
 						          <li>
-						          	<Link className="ContactBtn" to="/contact-us">Contact Us</Link>
+						          	<Link className="ContactBtn" to="/contact-us">{t('footer.contactUs')}</Link>
 						          </li>
 						        </ul>
 					      	</div>
@@ -62,3 +70,4 @@ export default class Footer extends Component {
         );
     }
 }
+export default withTranslation()(Footer);
