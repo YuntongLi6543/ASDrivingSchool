@@ -8,6 +8,33 @@
     "onlineTranslation": "在线翻译",
     "onlineResources": "线上资源"
   },
+  "carsouel": {
+    "carsouelCaption1": "我们提供最专业的驾驶课程和最好的价格",
+    "carsouelCaption2": "找到适合您的驾驶课程",
+    "carsouelCaption3": "在线资源帮助您考试通过"
+  },
+  "homePageFirstCardGroup": {
+    "card1Title": "最佳选择",
+    "card1Text": "我们提供最专业的驾驶课程和最好的价格",
+    "card1Button": "查看课程",
+    "card2Title": "在线翻译",
+    "card2Text": "为我们提供驾照的专业翻译服务",
+    "card2Button": "查看详情",
+    "card3Title": "在线资源",
+    "card3Text": "在线资源帮助您考试通过",
+    "card3Button": "查看资源"
+  },
+  "homePageSecondCardGroup": {
+    "card1Text": "张教练",
+    "card1Phone": "T电话：6479852174",
+    "card1Button": "更多详情",
+    "card2Text": "周教练",
+    "card2Phone": "电话：6479246776",
+    "card2Button": "更多详情",
+    "card3Text": "郝教练",
+    "card3Phone": "电话：6475199286",
+    "card3Button": "更多详情"
+  },
   "aboutUs": {
     "aboutASDrivingSchool": "关于五洲驾校",
     "aboutASDrivingSchoolContent": {
@@ -70,5 +97,5 @@
     "uploadFile": "中国驾照扫描件",
     "submit": "确认提交",
     "thankYou": "谢谢您联系我们"
-}
+  }
 }

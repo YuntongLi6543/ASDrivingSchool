@@ -7,6 +7,33 @@
         "onlineTranslation": "Online Translation",
         "onlineResources": "Online Resources"
     },
+    "carsouel": {
+        "carsouelCaption1": "We Teach Driving and More with High Quality and Best Offer",
+        "carsouelCaption2": "Find a Suitable Course For Yourself",
+        "carsouelCaption3": "Online Resource Helps You Success"
+    },
+    "homePageFirstCardGroup": {
+        "card1Title": "Best Offer",
+        "card1Text": "We Teach Driving and More with High Quality and Best Offer",
+        "card1Button": "See Courses",
+        "card2Title": "Online Translation",
+        "card2Text": "We Provide Driver License Translations",
+        "card2Button": "See Detail",
+        "card3Title": "Online Resources",
+        "card3Text": "Online Resources Helps You Success",
+        "card3Button": "See Resources"
+    },
+    "homePageSecondCardGroup": {
+        "card1Text": "Instructor Zhang",
+        "card1Phone": "Tel：6479852174",
+        "card1Button": "More Detail",
+        "card2Text": "Instructor Zhou",
+        "card2Phone": "Tel：6479246776",
+        "card2Button": "More Detail",
+        "card3Text": "Instructor Hao",
+        "card3Phone": "Tel：6475199286",
+        "card3Button": "More Detail"
+    },
     "aboutUs": {
         "aboutASDrivingSchool": "About AS Driving School",
         "aboutASDrivingSchoolContent": {
