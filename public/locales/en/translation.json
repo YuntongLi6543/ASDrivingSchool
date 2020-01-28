@@ -7,7 +7,6 @@
         "onlineTranslation": "Online Translation",
         "onlineResources": "Online Resources"
     },
-
     "aboutUs": {
         "aboutASDrivingSchool": "About AS Driving School",
         "aboutASDrivingSchoolContent": {
@@ -33,8 +32,7 @@
             "tel": "Tel：6475199286"
         }
     },
-
-    "footer":{
+    "footer": {
         "headOfficer": "Head Officer",
         "address": "4438 Sheppard Ave. E , unit 319, Toronto Ontario M1S 1V2",
         "tel": "Tel: 647-760-9358/ 647-519-9286",
@@ -48,13 +46,28 @@
         "aboutUs": "About Us",
         "contactUs": "Contact Us"
     },
-
     "contactUs": {
         "contactForm": "CONTACT FORM",
         "yourName": "Your Name",
         "emailAddress": "Email Address",
         "message": "Message",
         "submit": "Submit",
-        "thankYou": "Thank you for contcting us." 
+        "thankYou": "Thank you for contcting us."
+    },
+    "onlineTranslation": {
+        "pageTitle": "Chinese Driver Licence Online Translation",
+        "onlineTranslationContactForm": "Contact Form",
+        "cardTitle": "About Translation",
+        "cardText1": "This translation is a translation certificate from the Association of Translators and Interpreters of Ontario (ATIO), officially accredited by the Ministry of Transportation;",
+        "cardText2": "This translation certificate is not responsible for the authenticity of the original documents provided by the customer;",
+        "cardText3": "Please fill in the detailed mailing address, including your full address along with your postal code. If it is an apartment/condo/unit, please include your unit number. If you do not, the courier will return the mailto us and the customer will be responsible for the additional fees;",
+        "cardText4": "The translation certification may take up to 2 business days. After the completion of the translation, we will use Canada Post's Expedited delivery system. The delivery time will take up to 2-3 business days. After the delivery has been sent, we will send an email to inform you of your tracking number. Note: The courier will deliver to your mailbox without signature.",
+        "formTitle": "Upload Documents Online",
+        "yourName": "Your Name",
+        "emailAddress": "Email Address",
+        "phoneNumber": "Phone Number",
+        "uploadFile": "Driver license photocopy",
+        "submit": "Submit",
+        "thankYou": "Thank you for contcting us."
     }
 }
