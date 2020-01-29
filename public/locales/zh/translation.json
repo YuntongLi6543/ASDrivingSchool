@@ -25,6 +25,7 @@
     "card3Button": "查看资源"
   },
   "homePageSecondCardGroup": {
+    "groupTitle": "教练团队",
     "card1Text": "张教练",
     "card1Phone": "T电话：6479852174",
     "card1Button": "更多详情",
@@ -97,5 +98,18 @@
     "uploadFile": "中国驾照扫描件",
     "submit": "确认提交",
     "thankYou": "谢谢您联系我们"
+  },
+  "courses": {
+    "pageTitle": "精品课程",
+    "course1Title": "快速取证班",
+    "course1Text": "这个班次是为已经有相当的驾驶经验和基础的人群设计的。往往只需要二至三次的路面重点训练，然后由资深教练帮着订考期，并指导G2 或G 路考, 顺利过关。",
+    "course1ListText1": "针对性的重点训练",
+    "course1ListText2": "排快期",
+    "course1ListText3": "接送服务",
+    "course1ListText4": "租用教练车考试",
+    "course2Title": "驾车技能/知识快速提升课程",
+    "course2Text": "这种个性化的课程是为以下这些客户设计的，他们自己有车并有一定的驾驶经验和技能，也不一定是为考试目的，但某些方面的技能和知识比较薄弱，往往只想重点练某几个科目或者补充某方面欠缺的知识，以便短时间内快速达到目标",
+    "course3Title": "包考包过",
+    "course3Text": "这个课程是为有考试恐惧症的人设计的。这些人群中很多人驾驶技能并不低，但只因害怕考试而不敢去考试或屡屡失败。我们提供的包考项目可以减轻考试压力，减少经济负担，使学生轻松应对路考"
   }
 }

@@ -24,6 +24,7 @@
         "card3Button": "See Resources"
     },
     "homePageSecondCardGroup": {
+        "groupTitle": "Instructor Team",
         "card1Text": "Instructor Zhang",
         "card1Phone": "Tel：6479852174",
         "card1Button": "More Detail",
@@ -96,5 +97,18 @@
         "uploadFile": "Driver license photocopy",
         "submit": "Submit",
         "thankYou": "Thank you for contcting us."
+    },
+    "courses": {
+        "pageTitle": "Our Courses",
+        "course1Title": "",
+        "course1Text": "",
+        "course1ListText1": "",
+        "course1ListText2": "",
+        "course1ListText3": "",
+        "course1ListText4": "",
+        "course2Title": "",
+        "course2Text": "",
+        "course3Title": "",
+        "course3Text": ""
     }
 }

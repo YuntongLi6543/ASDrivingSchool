@@ -9,14 +9,10 @@ import {
 	Button,
 	Card,
 	CardBody,
-	FormGroup,
-	Input,
-	InputGroup,
 	Container,
 	Row,
 	Col
 } from "reactstrap";
-import classnames from "classnames";
 
 import { withTranslation } from 'react-i18next';
 import i18next from 'i18next';
@@ -211,6 +207,7 @@ class Home extends Component {
 					<Container>
 						<Row className="justify-content-center text-center">
 							<Col lg="12">
+							<h2 className="mb-5">{t('homePageSecondCardGroup.groupTitle')}</h2>
 								<Row className="row-grid">
 									<Col lg="4">
 										<Card className="card-lift--hover shadow border-0">
