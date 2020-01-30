@@ -22,7 +22,7 @@ export default class OnlineVideo extends Component {
                       <Card style={{ width: '27.5rem' }}>
                         <Card.Img variant="top" src="pic1.jpg" />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>G2 Online Video</Card.Title>
                             <Card.Text>
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
@@ -37,7 +37,7 @@ export default class OnlineVideo extends Component {
                         <Card style={{ width: '27.5rem' }}>
                             <Card.Img variant="top" src="pic1.jpg" />
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>G Online Video</Card.Title>
                                 <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
