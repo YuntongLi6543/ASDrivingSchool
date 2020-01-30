@@ -1,59 +1,201 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import '../scss/Home.scss';
+import {
+	Carousel,
+	CarouselItem,
+	CarouselControl,
+	CarouselIndicators,
+	Button,
+	Card,
+	CardBody,
+	Container,
+	Row,
+	Col
+} from "reactstrap";
 
+import { withTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
-export default class Home extends Component {
+import styled from 'styled-components';
 
-    render() {
-        return (
-        	<div>
-	            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-				  <ol className="carousel-indicators">
-				    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				  </ol>
-				  <div className="carousel-inner Images">
-				    <div className="carousel-item active">
-				      <img src="pic2.jpg" className="d-block w-100" alt="..." />
-				    </div>
-				    <div className="carousel-item">
-				      <img src="pic1.jpg" className="d-block w-100" alt="..." />
-				    </div>
-				    
-				  </div>
-				  <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-				    <span className="sr-only">Previous</span>
-				  </a>
-				  <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-				    <span className="sr-only">Next</span>
-				  </a>
+const items = [
+	{
+		src: "assets/img/pic1.jpg",
+		altText: 'pic1.jpg',
+		caption: 'carsouel.carsouelCaption1',
+		//button: "apply mortgage",
+		//link: '/mortgage'
+	},
+	{
+		src: "assets/img/pic2.jpg",
+		altText: 'pic2.jpg',
+		caption: 'Learning Your Benefits And Suitable Plans As A First Time Buyer Or New Immigrant',
+		//button: 'Contact Monest',
+		//link: '/contact'
+	},
+	{
+		src: "assets/img/pic3.jpg",
+		altText: 'pic3.jpg',
+		caption: 'Want To Look For How You Can Afford Your Mortgage?',
+		//button: 'See Mortgage calculators',
+		//link: '/calculator'
+	}
+];
+
+const CarsouelImg = styled.img`
+    object-fit:cover;
+	width: 100vw;
+	height: 55vh;
+`
+
+class Home extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			activeIndex: 0,
+			animating: false,
+		};
+	}
+
+	componentDidMount() {
+		// document.documentElement.scrollTop = 0;
+		// document.scrollingElement.scrollTop = 0;
+		// this.refs.main.scrollTop = 0;
+	}
+
+	nextCarouselPage = () => {
+		if (!this.state.animating) {
+			let nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+			this.setState({
+				activeIndex: nextIndex
+			})
+		}
+	}
+
+	previousCarouselPage = () => {
+		if (!this.state.animating) {
+			let nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+			this.setState({
+				activeIndex: nextIndex
+			})
+		}
+	}
+
+	goToCarouselPage = (newIndex) => {
+		if (!this.state.animating) {
+			this.setState({
+				activeIndex: newIndex
+			})
+		}
+	}
+
+	setAnimatingStatus = (animatingStatus) => {
+		this.setState({ animating: animatingStatus })
+	}
+
+	handleClick(lang) {
+		i18next.changeLanguage(lang);
+	}
+
+	render() {
+		const { t } = this.props;
+		let slides = items.map((item, index) =>
+			<CarouselItem
+				onExiting={() => this.setAnimatingStatus(true)}
+				onExited={() => this.setAnimatingStatus(false)}
+				key={item.src}
+			>
+				<CarsouelImg className="CarsouelImg" width='100%' height='80%' src={require(`../assets/img/pic${index + 1}.jpg`)} />
+				<div className="carousel-caption align-items-center justify-content-center m-0 p-0 carouselText">
+					<h1 className="carousel-text">{t(`carsouel.carsouelCaption${index + 1}`)}</h1>
 				</div>
+			</CarouselItem>
+		);
 
-				<div className="ThreeButton">
-					<button className="btn btn-primary" type="submit">Button1</button>
-					<button className="btn btn-primary" type="submit">Button2</button>
-					<button className="btn btn-primary" type="submit">Button3</button>
-				</div>
+		return (
+			<div>
+				<section className="section p-0 mb-5">
+					<Container className="d-flex p-0 m-0">
+						<div className="p-0 m-0">
+							<Carousel
+								activeIndex={this.state.activeIndex}
+								next={this.nextCarouselPage}
+								previous={this.previousCarouselPage}
+							>
+								<CarouselIndicators items={items} activeIndex={this.state.activeIndex} onClickHandler={this.goToCarouselPage} />
+								{slides}
+								<CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previousCarouselPage} />
+								<CarouselControl direction="next" directionText="Next" onClickHandler={this.nextCarouselPage} />
+							</Carousel>
+						</div>
+					</Container>
+				</section>
 
-				<div className="container ThreeInfo">
-					<div className="row">
-						<div className="col-xs-12 col-sm-4">
-							<p className="Info">Our program is a ministry-approved beginner driver education course. This program is designed to enhance the students’ driving safety knowledge and allow students to practice correct driving techniques on the road while enforcing awareness and judgment as a responsible driver.
-							</p>
-						</div>
-						<div className="col-xs-12 col-sm-4">
-							<p className="Info">INfo2</p>
-						</div>
-						<div className="col-xs-12 col-sm-4">
-							<p className="Info">INfo3</p>
-						</div>
-					</div>
-				</div>
+				<section className="section section-lg pt-lg-0">
+					<Container>
+						<Row className="justify-content-center text-center">
+							<Col lg="12">
+								<Row className="row-grid">
+									<Col lg="4">
+										<Card className="card-lift--hover shadow border-0">
+											<CardBody className="py-5 first-card-body">
+												<h6 className="text-uppercase">
+													{t('homePageFirstCardGroup.card1Title')}
+												</h6>
+												<p className="description mt-3 mb-1">
+													{t('homePageFirstCardGroup.card1Text')}
+												</p>
+												<Button
+													className="mt-4 our-server-btn"
+													color="primary"
+												>
+													{t('homePageFirstCardGroup.card1Button')}
+												</Button>
+											</CardBody>
+										</Card>
+									</Col>
+									<Col lg="4">
+										<Card className="card-lift--hover shadow border-0">
+											<CardBody className="py-5 first-card-body">
+												<h6 className="text-uppercase">
+													{t('homePageFirstCardGroup.card2Title')}
+												</h6>
+												<p className="description mt-3 mb-1">
+													{t('homePageFirstCardGroup.card2Text')}
+												</p>
+												<Button
+													className="mt-4 our-server-btn"
+													color="primary"
+												>
+													{t('homePageFirstCardGroup.card2Button')}
+												</Button>
+											</CardBody>
+										</Card>
+									</Col>
+									<Col lg="4">
+										<Card className="card-lift--hover shadow border-0">
+											<CardBody className="py-5 first-card-body">
+												<h6 className="text-uppercase">
+													{t('homePageFirstCardGroup.card3Title')}
+												</h6>
+												<p className="description mt-3 mb-1">
+													{t('homePageFirstCardGroup.card3Text')}
+												</p>
+												<Button
+													className="mt-4 our-server-btn"
+													color="primary"
+												>
+													{t('homePageFirstCardGroup.card3Button')}
+												</Button>
+											</CardBody>
+										</Card>
+									</Col>
+								</Row>
+							</Col>
+						</Row>
+					</Container>
+				</section>
 
 				<div className="ContactUs">
 					<p>ARE YOU LOOKING FOR A DRIVING SCHOOL IN CANADA?
@@ -61,45 +203,77 @@ export default class Home extends Component {
 					<Link className="ContactBtn btn btn-primary" to="/contact-us" role="button">Contact Us</Link>
 				</div>
 
-				<div className="ThreeCoach">
-					<div className="container ThreeInfo">
-						<div className="row">
-							<div className="col-xs-12 col-sm-4">
-								<div className="card">
-								  <img src="coach-zhang.png" className="card-img-top" alt="..." />
-								  <div className="card-body">
-								    <p className="card-text">Instructor Zhang is an excellent and experienced instructor registered by the Ontario government. 
-								    </p>
-								    <Button className="btn-link"><Link className="nav-link" to="/about-us">More</Link>
-								    </Button>
-								    </div>
-								</div>
-							</div>
-							<div className="col-xs-12 col-sm-4">
-								<div className="card">
-								  <img src="coach-zhou.png" className="card-img-top" alt="..." />
-								  <div className="card-body">
-								    <p className="card-text">Instructor Zhou is an excellent driving professional with more than 30 years of driving experience and registered with Ontario government.  patient and enthusiastic. By making good use of unique training methods, he can ensure that students master safe driving skills in a short time.</p>
-								  	<Button className="btn-link"><Link className="nav-link" to="/about-us">More</Link>
-								    </Button>
-								  </div>
-								</div>
-							</div>
-							<div className="col-xs-12 col-sm-4">
-								<div className="card">
-								  <img src="coach-hao.png" className="card-img-top" alt="..." />
-								  <div className="card-body">
-								    <p className="card-text">As an excellent Instructor of both in-car and in-class instruction, instructor Hao is very experienced, responsible, and very knowledgeable with road tests and traffic regulations.</p>
-								  	<Button className="btn-link"><Link className="nav-link" to="/about-us">More</Link>
-								    </Button>
-								  </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-        );
-    }
+				<section className="mt-5 section section-lg pt-lg-0">
+					<Container>
+						<Row className="justify-content-center text-center">
+							<Col lg="12">
+							<h2 className="mb-5">{t('homePageSecondCardGroup.groupTitle')}</h2>
+								<Row className="row-grid">
+									<Col lg="4">
+										<Card className="card-lift--hover shadow border-0">
+											<img src="coach-zhang.png" className="second-card-img" alt="..." />
+											<CardBody className="py-5 second-card-body">
+												<h6 className="text-uppercase">
+													{t('homePageSecondCardGroup.card1Text')}
+												</h6>
+												<p className="description mt-3 mb-1">
+													{t('homePageSecondCardGroup.card1Phone')}
+												</p>
+												<Button
+													className="mt-4 our-server-btn"
+													color="primary"
+												>
+													{t('homePageSecondCardGroup.card1Button')}
+												</Button>
+											</CardBody>
+										</Card>
+									</Col>
+									<Col lg="4">
+										<Card className="card-lift--hover shadow border-0">
+											<img src="coach-zhou.png" className="second-card-img" alt="..." />
+											<CardBody className="py-5 second-card-body">
+												<h6 className="text-uppercase">
+													{t('homePageSecondCardGroup.card2Text')}
+												</h6>
+												<p className="description mt-3 mb-1">
+													{t('homePageSecondCardGroup.card2Phone')}
+												</p>
+												<Button
+													className="mt-4 our-server-btn"
+													color="primary"
+												>
+													{t('homePageSecondCardGroup.card2Button')}
+												</Button>
+											</CardBody>
+										</Card>
+									</Col>
+									<Col lg="4">
+										<Card className="card-lift--hover shadow border-0">
+											<img src="coach-hao.png" className="second-card-img" alt="..." />
+											<CardBody className="py-5 second-card-body">
+												<h6 className="text-uppercase">
+													{t('homePageSecondCardGroup.card3Text')}
+												</h6>
+												<p className="description mt-3 mb-1">
+													{t('homePageSecondCardGroup.card3Phone')}
+												</p>
+												<Button
+													className="mt-4 our-server-btn"
+													color="primary"
+												>
+													{t('homePageSecondCardGroup.card3Button')}
+												</Button>
+											</CardBody>
+										</Card>
+									</Col>
+								</Row>
+							</Col>
+						</Row>
+					</Container>
+				</section>
+			</div >
+		);
+	}
 }
+
+export default withTranslation()(Home);

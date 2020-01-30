@@ -1,0 +1,33 @@
+@import'Style.scss'; 
+@import'Variables.scss';
+
+.page-title {
+	text-align: center;
+	padding: 4% 0 4% 0;     
+}
+
+.card {
+	margin-bottom: 50px;  
+}
+
+.card-title {
+	text-align: center;
+	padding-top: 50px;  
+}
+
+.card-body {
+	padding: 20px 80px 30px 80px;  
+}
+
+.card-list {
+	padding: 10px 10px;
+}
+
+.card-list-content {
+	padding: 7px 0px;
+}
+
+.form-title {
+	text-align: center;
+	padding: 0 0 4% 0;     
+}

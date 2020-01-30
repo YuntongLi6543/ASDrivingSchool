@@ -1,58 +1,157 @@
 @import'Style.scss'; 
 @import'Variables.scss';
 
-.carousel-indicators{
-	 background-color:transparent;
+.carouselText{
+    position: absolute;
+    top:47%;
+	display: block!important;
+	background-color: rgba(0, 0, 0, 0);
+    h1{
+        color: #fff;
+    }
+
+    .carsouelBtn{
+        background-color: rgba(0, 0, 0, 0);
+        color: #fff;
+        margin-top: 50px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        padding: 20px 30px;
+    } 
 }
 
-
-.Images{
-
-	img{
-		height: 25rem;
-	}
-}
-.container{
-	padding: 0;
-}
-.ThreeButton{
-	width: 100%;
-	height: 20%;
-	padding: 3% 11%;
-	@extend %flexSpaceBetween;
-
-	.btn{
-		width: 30%;
-		background: $DarkGreen;
-		color: #fff;
-		border-color: $DarkGreen;
-		padding: 1% 0;
-	}
-
-	.btn:hover{
-		color: #000;
-		background: $Green;
-		border-color: $Green;
-	}
+.carousel-text{
+	background-color: rgba(0, 0, 0, 0);
 }
 
-.ThreeInfo{
+.CarsouelImg{
+    filter:brightness(30%);
+}
 
-	height:20%;
+.application{
+    h2{
+        color: #5b5e60;
+    }
+    .lead{
+        margin-top: 0rem;
+        color: #5b5e60;
+    }
+    .row-item{
+        padding: 0 18%;
+        .col-item{
+            .application-item{
+                border: 1px solid #5b5e60;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin: 0 auto;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: #5b5e60;
+                .three-icon{
+                    margin-bottom: 5px;
+                }
+                .application-text{
+                    font-size: 1.2rem;
+                }
+            }
+            .application-item:hover{
+                background-color: #0f930c;
+                .three-icon,
+                .application-text
+                {
+                    color: #fff;
+                }
+            }
+        }
+    }
 
-	.row{
-		width: 100%;
-		margin: 0;
+}
 
-		.Info{
-			width: 100%;
-			height: 13rem;
-			word-break:break-word;
-			// overflow-x: scroll;
-		}
+.section-shaped{
+    .shape-default{
+        background-image: url('https://mortgagemf.com/wp-content/uploads/2019/05/about-bg-2.jpg')!important;
+        filter:brightness(30%);
+    }
+}
 
-		
-	}
+.first-card-body{
+    height: 300px !important;
+    .our-server-btn,
+    .our-server-icon
+    {
+        background-color: rgba(0, 51, 0, .8);
+        color: #fff;
+    }
+    .our-server-btn{
+        border-color:  rgba(0, 51, 0, .8)!important;
+    }
+    h6{
+        color:rgba(0, 51, 0, .8); 
+        
+    }
+}
+
+.second-card-body{
+    height: 230px!important;
+    .our-server-btn,
+    .our-server-icon
+    {
+        background-color: rgba(0, 51, 0, .8);
+        color: #fff;
+    }
+    .our-server-btn{
+        border-color:  rgba(0, 51, 0, .8)!important;
+    }
+    h6{
+        color:rgba(0, 51, 0, .8); 
+        
+    }
+}
+
+.customer{
+    background-color: #f8f8f8!important;
+    h2,
+    .lead{
+        color: #5b5e60!important;
+    }
+
+    .customer-item{
+        padding:20px;     
+        h5,
+        p{
+            color: #383838!important;
+        }
+        .cusomer-btn{
+            color:rgba(0, 51, 0, .8);
+            cursor: pointer;
+        }
+        .cusomer-btn:hover{
+            background-color: rgba(0, 51, 0, .8);
+            color: #fff;
+            border-color: rgba(0, 51, 0, .8);
+        }
+    }
+    .first-item{
+        padding:20px 5px;
+    }
+    .customer-item:hover{
+        background-color: #eeeeee;
+    }
+}
+
+.feedback{
+    background-color: #f8f8f8!important;
+    h4{
+        color: #5b5e60!important;
+    }
+    .title,
+    .learn-more{
+        color:rgba(0, 51, 0, .8);
+    }
 }
 
 .ContactUs{
@@ -78,46 +177,48 @@
 		color: #000;
 		background: $Green;
 		border-color: $Green;
-	}
+    }
 }
 
-.ThreeCoach{
-	padding:3% 0;
-	background:$Honeydew;
-
-	.row{
-
-		background:$Honeydew;
-
-		.col-xs-12, .col-sm-4{
-			background:$Honeydew;
-		}
-
-		.card{
-			img{
-				height:17rem;
-			}
-
-			.card-body{
-				padding: 0;
-				.card-text{
-					height: 8rem;
-					padding:2% 0 0 2%;;
-				}
-				.btn-link{
-					width: 100%;
-					background:$DarkGreen;
-					border-color:$DarkGreen;
-					.nav-link{
-						color:#fff;
-					}
-					.nav-link:hover{
-						text-decoration: none;
-						// color:#fff;
-					}
-				}
-			}
-		}
-	}
+.second-card-img {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    max-height: 250px;
 }
 
+@media screen and (min-width: 426px) and (max-width: 768px){
+    .carouselText{
+		background-color: rgba(0, 0, 0, 0);
+        top:48%;
+        h1{
+            font-size:1.6rem;
+
+        }
+        .carsouelBtn{
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    .carouselText{
+		background-color: rgba(0, 0, 0, 0);
+        top:45%;
+        h1{
+            font-size:1rem;
+
+        }
+        .carsouelBtn{
+            font-size: .7rem;
+            padding: 8px 10px;
+            margin-top: 5px;
+        }
+    }
+
+    .renewer-item{
+        margin-bottom: 0!important;
+    }
+}
