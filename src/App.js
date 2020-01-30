@@ -16,7 +16,6 @@ import G2OnlineVideo from './schoolApp/G2OnlineVideo';
 import GOnlineVideo from './schoolApp/GOnlineVideo';
 
 import { withTranslation } from 'react-i18next';
-import i18next from 'i18next';
 
 class App extends Component {
 
@@ -26,27 +25,11 @@ class App extends Component {
     };
   }
 
-  handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
 
   render() {
-    const { t } = this.props;
-
     return (
       <BrowserRouter>
-        <div>
-          <nav style={{ width: '100%', padding: '2rem 0', backgroundColor: 'gray' }}>
-            <button onClick={() => this.handleClick('en')} >
-              English
-            </button>
-            <button onClick={() => this.handleClick('zh')} >
-              中文
-            </button>
-          </nav>
-          <h3>{t('languageExample')}</h3>
           <TopBar />
-        </div>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/home" component={Home} />
