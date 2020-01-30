@@ -11,13 +11,40 @@ import ContactUs from './schoolApp/ContactUs.js';
 import OnlineTranslation from './schoolApp/OnlineTranslation.js';
 import OnlineResources from './schoolApp/OnlineResources.js';
 import Footer from './schoolApp/Footer.js';
+import OnlineVideo from './schoolApp/OnlineVideo';
+import G2OnlineVideo from './schoolApp/G2OnlineVideo';
+import GOnlineVideo from './schoolApp/GOnlineVideo';
+
+import { withTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 class App extends Component {
-  
+
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
+
+  handleClick(lang) {
+    i18next.changeLanguage(lang)
+  }
+
   render() {
+    const { t } = this.props;
+
     return (
       <BrowserRouter>
         <div>
+          <nav style={{ width: '100%', padding: '2rem 0', backgroundColor: 'gray' }}>
+            <button onClick={() => this.handleClick('en')} >
+              English
+            </button>
+            <button onClick={() => this.handleClick('zh')} >
+              中文
+            </button>
+          </nav>
+          <h3>{t('languageExample')}</h3>
           <TopBar />
         </div>
         <Switch>
@@ -28,6 +55,9 @@ class App extends Component {
           <Route path="/courses" component={Courses} />
           <Route path="/online-translation" component={OnlineTranslation} />
           <Route path="/online-resources" component={OnlineResources} />
+          <Route path="/G-online-video" component={GOnlineVideo} />
+          <Route path="/G2-online-video" component={G2OnlineVideo} />
+          <Route path="/online-video" component={OnlineVideo} />
           <Redirect from="/*" to="/" />
         </Switch>
         <div>
@@ -38,4 +68,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withTranslation()(App);
