@@ -1,7 +1,15 @@
 @import'Style.scss'; 
 @import'Variables.scss';
 
-.carouselText{
+.navbar{
+    .container{
+        padding: 0;
+    }
+}
+.carousel-indicators {
+    background: border-box!important;
+}
+.carousel-text-content{
     position: absolute;
     top:47%;
 	display: block!important;
@@ -9,66 +17,22 @@
     h1{
         color: #fff;
     }
-
-    .carsouelBtn{
-        background-color: rgba(0, 0, 0, 0);
-        color: #fff;
-        margin-top: 50px;
-        cursor: pointer;
-        font-size: 1.3rem;
-        padding: 20px 30px;
-    } 
 }
 
 .carousel-text{
 	background-color: rgba(0, 0, 0, 0);
 }
-
-.CarsouelImg{
-    filter:brightness(30%);
+.carousel-inner{
+    width: 100%;
+    .CarsouelImg{
+        filter:brightness(30%);
+        width: 100%!important;
+        height: 600px!important;
+    }
 }
-
-.application{
-    h2{
-        color: #5b5e60;
-    }
-    .lead{
-        margin-top: 0rem;
-        color: #5b5e60;
-    }
-    .row-item{
-        padding: 0 18%;
-        .col-item{
-            .application-item{
-                border: 1px solid #5b5e60;
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                margin: 0 auto;
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                color: #5b5e60;
-                .three-icon{
-                    margin-bottom: 5px;
-                }
-                .application-text{
-                    font-size: 1.2rem;
-                }
-            }
-            .application-item:hover{
-                background-color: #0f930c;
-                .three-icon,
-                .application-text
-                {
-                    color: #fff;
-                }
-            }
-        }
-    }
-
+.all-slide{
+    width: 100%;
+    height: 600px;
 }
 
 .section-shaped{
@@ -78,38 +42,44 @@
     }
 }
 
-.first-card-body{
-    height: 300px !important;
+.card-body{
+    padding: 10px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.first-card-body,
+.second-card-body{
     .our-server-btn,
     .our-server-icon
     {
-        background-color: rgba(0, 51, 0, .8);
+        background-color: $DarkGreen;
         color: #fff;
     }
     .our-server-btn{
-        border-color:  rgba(0, 51, 0, .8)!important;
+        border-color: $DarkGreen!important;
     }
     h6{
-        color:rgba(0, 51, 0, .8); 
-        
+        color: $DarkGreen;   
+    }
+    button{
+        transition: all 0.3s;
+    }   
+    button:hover{
+        transform: scale(1.1);
+    }
+}
+.first-card-body{
+    height: 300px !important;
+    i{
+        padding: 20px 0 35px 0;
+        color: $DarkGreen;
     }
 }
 
 .second-card-body{
-    height: 230px!important;
-    .our-server-btn,
-    .our-server-icon
-    {
-        background-color: rgba(0, 51, 0, .8);
-        color: #fff;
-    }
-    .our-server-btn{
-        border-color:  rgba(0, 51, 0, .8)!important;
-    }
-    h6{
-        color:rgba(0, 51, 0, .8); 
-        
-    }
+    height: 240px!important;
 }
 
 .customer{
@@ -154,29 +124,32 @@
     }
 }
 
-.ContactUs{
-	@extend %flexSpaceBetween;
-	width: 100%;
-	padding: 3% 11%;
-	background: $DarkGreen;
-	margin-top: 2%;
+.contact-us{
+    background: $DarkGreen;
+    .container{
+        @extend %flexSpaceBetween;
+        width: 100%;
+        padding: 40px 0;
+        background: $DarkGreen;
+        margin-top: 48px;
 
-	p{
-		background: $DarkGreen;
-		color: #fff;
-		margin: 0;
-	}
-	.ContactBtn{
-		width: 25%;
-		background: $DarkGreen;
-		border-color: #fff;
-		color: #fff;
+        p{
+            background: $DarkGreen;
+            color: #fff;
+            margin: 0;
+        }
+        .contact-btn{
+            width: 25%;
+            background: $DarkGreen;
+            border-color: #fff;
+            color: #fff;
 
-	}
-	.ContactBtn:hover{
-		color: #000;
-		background: $Green;
-		border-color: $Green;
+        }
+        .contact-btn:hover{
+            color: #000;
+            background: $Green;
+            border-color: $Green;
+        }
     }
 }
 

@@ -107,7 +107,7 @@ class Home extends Component {
 				key={item.src}
 			>
 				<CarsouelImg className="CarsouelImg" width='100%' height='80%' src={require(`../assets/img/pic${index + 1}.jpg`)} />
-				<div className="carousel-caption align-items-center justify-content-center m-0 p-0 carouselText">
+				<div className="carousel-caption align-items-center justify-content-center m-0 p-0 carousel-text-content">
 					<h1 className="carousel-text">{t(`carsouel.carsouelCaption${index + 1}`)}</h1>
 				</div>
 			</CarouselItem>
@@ -115,9 +115,10 @@ class Home extends Component {
 
 		return (
 			<div>
-				<section className="section p-0 mb-5">
-					<Container className="d-flex p-0 m-0">
-						<div className="p-0 m-0">
+				<style>{`@import url(https://use.fontawesome.com/releases/v5.6.3/css/all.css)`}</style>
+				<section className="section p-0 mb-5 all-slide">
+					<div className="d-flex">
+						{/* <div className="p-0 m-0"> */}
 							<Carousel
 								activeIndex={this.state.activeIndex}
 								next={this.nextCarouselPage}
@@ -128,18 +129,19 @@ class Home extends Component {
 								<CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previousCarouselPage} />
 								<CarouselControl direction="next" directionText="Next" onClickHandler={this.nextCarouselPage} />
 							</Carousel>
-						</div>
-					</Container>
+						{/* </div> */}
+					</div>
 				</section>
 
 				<section className="section section-lg pt-lg-0">
 					<Container>
 						<Row className="justify-content-center text-center">
-							<Col lg="12">
+							<Col lg="12" className="p-0">
 								<Row className="row-grid">
 									<Col lg="4">
 										<Card className="card-lift--hover shadow border-0">
 											<CardBody className="py-5 first-card-body">
+												<i className="far fa-smile-wink fa-2x"></i>
 												<h6 className="text-uppercase">
 													{t('homePageFirstCardGroup.card1Title')}
 												</h6>
@@ -158,6 +160,7 @@ class Home extends Component {
 									<Col lg="4">
 										<Card className="card-lift--hover shadow border-0">
 											<CardBody className="py-5 first-card-body">
+												<i className="fas fa-language fa-2x"></i>
 												<h6 className="text-uppercase">
 													{t('homePageFirstCardGroup.card2Title')}
 												</h6>
@@ -176,6 +179,7 @@ class Home extends Component {
 									<Col lg="4">
 										<Card className="card-lift--hover shadow border-0">
 											<CardBody className="py-5 first-card-body">
+												<i className="fab fa-creative-commons-share fa-2x"></i>
 												<h6 className="text-uppercase">
 													{t('homePageFirstCardGroup.card3Title')}
 												</h6>
@@ -197,16 +201,18 @@ class Home extends Component {
 					</Container>
 				</section>
 
-				<div className="ContactUs">
+				<div className="contact-us">
+				<Container>
 					<p>ARE YOU LOOKING FOR A DRIVING SCHOOL IN CANADA?
 					</p>
-					<Link className="ContactBtn btn btn-primary" to="/contact-us" role="button">Contact Us</Link>
+					<Link className="contact-btn btn btn-primary" to="/contact-us" role="button">Contact Us</Link>
+				</Container>
 				</div>
 
 				<section className="mt-5 section section-lg pt-lg-0">
 					<Container>
 						<Row className="justify-content-center text-center">
-							<Col lg="12">
+							<Col lg="12" className="p-0">
 							<h2 className="mb-5">{t('homePageSecondCardGroup.groupTitle')}</h2>
 								<Row className="row-grid">
 									<Col lg="4">

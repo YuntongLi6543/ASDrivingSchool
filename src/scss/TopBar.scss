@@ -1,28 +1,44 @@
 @import'Style.scss'; 
 @import'Variables.scss';
 
-
-.Nav{
+.nav-part{
 	height: 40%;
 	border-bottom:1px solid #ddd;
 
-
-	.TopNav{
+	.top-nav-bar{
 		height: 10%;
+		width: 100%;
 		background:$DarkGreen;
-		padding: 0 11%;
+		// padding: 0 11%;
+		
 
-		.Language{
+		.language{
 			background:$DarkGreen;
-			color: #fff;
-		}
+			display: flex;
+			justify-content: flex-end;
+			padding: 0;
+			.en-lang, 
+			.ch-lang{
+				background:$DarkGreen;
+				color: #fff;
+				display: inline-block;
+				cursor: pointer;
+			}
+			.ch-lang{
+				margin-left: 20px;
+			}
+			.en-lang:hover,
+			.ch-lang:hover{
+				color: $Green;
+			}
+		}		
 	}
 
 
-	.NavBar{
+	.nav-bar{
 		height: 20%;
 
-		.Brand{
+		.brand{
 			width: 55%;
 			display:block;
 			margin: 0;
@@ -36,15 +52,15 @@
 				width:80%;
 			}
 
-			.LogoImage{
+			.logo-image{
 				float:left;
 			}
 
-			.SchoolName{
+			.school-name{
 				align-self: center;
 				margin: 0;
 				display:inline-block;
-				float:left;
+				// float:left;
 				color: $DarkGreen;
 				overflow-wrap: break-word;
 				word-wrap:break-word;
@@ -59,6 +75,19 @@
 				}
 			}
 		}
+		.online-resource a{
+			padding-right: 0;
+		}
+
+		
 	}
+	.navbar-light .navbar-nav .nav-link {
+		color: #000!important;
+	}
+	.navbar-light .navbar-nav .nav-link:focus, 
+	.navbar-light .navbar-nav .nav-link:hover{
+		color: $DarkGreen!important;
+	}
+
 }
 
