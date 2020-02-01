@@ -116,7 +116,7 @@ class Home extends Component {
 		return (
 			<div>
 				<style>{`@import url(https://use.fontawesome.com/releases/v5.6.3/css/all.css)`}</style>
-				<section className="section p-0 mb-5 all-slide">
+				<section className="section p-0 mb-5 all-slide" width='100%'>
 					<div className="d-flex">
 						{/* <div className="p-0 m-0"> */}
 							<Carousel
