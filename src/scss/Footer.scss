@@ -1,33 +1,41 @@
 @import'Style.scss'; 
 @import'Variables.scss';
 
-
 .page-footer{
+	margin-top: 48px;
 	background:$footer;
-	
 
 	.container-fluid{
 		padding:1% 8%;
 	}
 
-	.container-fluid,.row,hr,
+	.container,.row,hr,
 	.col-md-6,.mt-md-0,.mt-3,
 	.col-md-3,.mb-md-0,.mb-3,
 	.col-md-3, .mb-md-0, .mb-3,h5,p, ul li{
-		background:$footer;
+		background:$footer;	
 	}
 
-	h5,p,ul li{
+	h5{
 		color:#fff;
 	}
+	.contact-btn,p,ul li{
+		color: #8f9193!important;
+	}
+	.contact-btn:hover{
+		color:#fff!important;
+	}
 
-	.ContactBtn{
-		color: #fff;
+	.contact-btn{
 		text-decoration: none;
 	}
 
 	.footer-copyright{
 		background: $copyright;
-		color:#fff;
+		.container{
+			background: $copyright;
+			color:#8f9193;
+			font-size: .9rem;
+		}
 	}
 }
