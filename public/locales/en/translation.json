@@ -110,5 +110,8 @@
         "course2Text": "",
         "course3Title": "",
         "course3Text": ""
-    }
+    },
+    "onlineResource":{
+        "questionTitle": "Trivia Questionaire"
+      }
 }
