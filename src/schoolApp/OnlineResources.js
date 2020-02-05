@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Tab from 'react-bootstrap/Tab';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -6,9 +7,17 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import '../scss/OnlineResources.scss';
 
-export default class OnlineResources extends Component {
+import { withTranslation } from 'react-i18next';
+import i18next from 'i18next';
+
+class OnlineResources extends Component {
+
+	handleClick(lang) {
+		i18next.changeLanguage(lang);
+	}
 
 	render() {
+		const { t } = this.props;
 		return (
 			<div>
 				<Container>
@@ -21,7 +30,7 @@ export default class OnlineResources extends Component {
 										<Nav.Link eventKey="first">Tab 1</Nav.Link>
 									</Nav.Item>
 									<Nav.Item>
-										<Nav.Link eventKey="second">Tab 2</Nav.Link>
+										<Nav.Link eventKey="second">Question</Nav.Link>
 									</Nav.Item>
 								</Nav>
 							</Col>
@@ -31,7 +40,11 @@ export default class OnlineResources extends Component {
 										<p>content1</p>
 									</Tab.Pane>
 									<Tab.Pane eventKey="second">
-										<p>content2</p>
+										<div className="question-title">
+											<h2>{t('onlineResource.questionTitle')}</h2>
+										</div>
+										<Link to="/files/Trivia_Questionaire.docx" target="_blank" download>Download</Link>
+										<Link to="/files/笔试题中文版.docx" target="_blank" download>中文版下载</Link>
 									</Tab.Pane>
 								</Tab.Content>
 							</Col>
@@ -42,3 +55,4 @@ export default class OnlineResources extends Component {
 		);
 	}
 }
+export default withTranslation()(OnlineResources);
