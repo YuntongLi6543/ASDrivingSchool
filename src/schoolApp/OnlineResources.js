@@ -43,8 +43,8 @@ class OnlineResources extends Component {
 										<div className="question-title">
 											<h2>{t('onlineResource.questionTitle')}</h2>
 										</div>
-										<Link to="/files/Trivia_Questionaire.docx" target="_blank" download>Download</Link>
-										<Link to="/files/笔试题中文版.docx" target="_blank" download>中文版下载</Link>
+										{/* <Link to="/files/Trivia_Questionaire.docx" target="_blank" download>Download</Link>
+										<Link to="/files/笔试题中文版.docx" target="_blank" download>中文版下载</Link> */}
 									</Tab.Pane>
 								</Tab.Content>
 							</Col>
