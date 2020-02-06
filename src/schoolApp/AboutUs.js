@@ -91,7 +91,7 @@ class AboutUs extends Component {
 					    	</p>
 					    </Col>
 					    <Col xs={12} md={5}>
-					       <Card.Img className="Image" src="coach-Hao.png" />
+					       <Card.Img className="Image" src="coach-hao.png" />
 					    </Col>
 					</Row>
 	            </Container>
