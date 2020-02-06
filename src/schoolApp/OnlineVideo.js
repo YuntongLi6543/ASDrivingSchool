@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 // import TabContainer from 'react-bootstrap/TabContainer';
 // import TabPane from 'react-bootstrap/TabPane';
 //import Nav from 'react-bootstrap/Nav';
@@ -27,7 +27,7 @@ export default class OnlineVideo extends Component {
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
                             </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
+                            <Link to="/G2-online-video" className="btn btn-primary">Watch Video</Link>
                         </Card.Body>
                         </Card>
 
@@ -42,7 +42,7 @@ export default class OnlineVideo extends Component {
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Link to="/G2-online-video" className="btn btn-primary">Watch Video</Link>
                             </Card.Body>
                         </Card>
                       </Col>

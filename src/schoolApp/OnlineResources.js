@@ -38,6 +38,7 @@ class OnlineResources extends Component {
 								<Tab.Content>
 									<Tab.Pane eventKey="first">
 										<p>content1</p>
+										<Link to="/online-video" className="btn btn-primary">Watch Video</Link>
 									</Tab.Pane>
 									<Tab.Pane eventKey="second">
 										<div className="question-title">
