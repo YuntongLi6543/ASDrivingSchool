@@ -69,6 +69,7 @@
         transform: scale(1.1);
     }
 }
+
 .first-card-body{
     height: 300px !important;
     i{
@@ -79,6 +80,15 @@
 
 .second-card-body{
     height: 240px!important;
+}
+
+.first-card-text{
+    height: 30px!important;
+    margin: 15px 20px 20px 20px;
+}
+
+.second-card-text{
+    height: 30px!important;
 }
 
 .customer{

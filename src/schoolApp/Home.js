@@ -145,7 +145,7 @@ class Home extends Component {
 												<h6 className="text-uppercase">
 													{t('homePageFirstCardGroup.card1Title')}
 												</h6>
-												<p className="description mt-3 mb-1">
+												<p className="first-card-text">
 													{t('homePageFirstCardGroup.card1Text')}
 												</p>
 												<Button
@@ -164,7 +164,7 @@ class Home extends Component {
 												<h6 className="text-uppercase">
 													{t('homePageFirstCardGroup.card2Title')}
 												</h6>
-												<p className="description mt-3 mb-1">
+												<p className="first-card-text">
 													{t('homePageFirstCardGroup.card2Text')}
 												</p>
 												<Button
@@ -183,7 +183,7 @@ class Home extends Component {
 												<h6 className="text-uppercase">
 													{t('homePageFirstCardGroup.card3Title')}
 												</h6>
-												<p className="description mt-3 mb-1">
+												<p className="first-card-text">
 													{t('homePageFirstCardGroup.card3Text')}
 												</p>
 												<Button
@@ -222,7 +222,7 @@ class Home extends Component {
 												<h6 className="text-uppercase">
 													{t('homePageSecondCardGroup.card1Text')}
 												</h6>
-												<p className="description mt-3 mb-1">
+												<p className="description mt-2 mb-1">
 													{t('homePageSecondCardGroup.card1Phone')}
 												</p>
 												<Button
@@ -241,7 +241,7 @@ class Home extends Component {
 												<h6 className="text-uppercase">
 													{t('homePageSecondCardGroup.card2Text')}
 												</h6>
-												<p className="description mt-3 mb-1">
+												<p className="description mt-2 mb-1">
 													{t('homePageSecondCardGroup.card2Phone')}
 												</p>
 												<Button
@@ -260,7 +260,7 @@ class Home extends Component {
 												<h6 className="text-uppercase">
 													{t('homePageSecondCardGroup.card3Text')}
 												</h6>
-												<p className="description mt-3 mb-1">
+												<p className="description mt-2 mb-1">
 													{t('homePageSecondCardGroup.card3Phone')}
 												</p>
 												<Button
