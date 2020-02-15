@@ -3,24 +3,24 @@
         "allSuccessfulDrivingSchool": "All successful driving school",
         "home": "Home",
         "aboutUs": "About Us",
-        "courses": "Courses",
+        "courses": "Featured Course",
         "onlineTranslation": "Online Translation",
         "onlineResources": "Online Resources"
     },
     "carsouel": {
-        "carsouelCaption1": "We Teach Driving with High Quality and Best Offer",
-        "carsouelCaption2": "Find a Suitable Course For Yourself",
-        "carsouelCaption3": "Online Resource Helps You Success"
+        "carsouelCaption1": "Our School Patiently Teach the Best Practice For Defensive Driving",
+        "carsouelCaption2": "Customized Course Help You To Identify Driving Weakness And Improve Driving Skills Quickly",
+        "carsouelCaption3": "Guarantee Success To The Written And Road Test"
     },
     "homePageFirstCardGroup": {
         "card1Title": "Professional Teaching",
-        "card1Text": "High Quality and Best Offer",
+        "card1Text": "High Quality, Fast learning, Quickest Offer & Money Saving",
         "card1Button": "See Courses",
         "card2Title": "Online Translation",
-        "card2Text": "We Provide Driver License Translations",
-        "card2Button": "See Detail",
+        "card2Text": "Translate your Chinese Driver License Online",
+        "card2Button": "Go Translation",
         "card3Title": "Online Resources",
-        "card3Text": "Online Resources Helps You Success",
+        "card3Text": "Familiarize yourself with the driving knowledge and practice",
         "card3Button": "See Resources"
     },
     "homePageSecondCardGroup": {
