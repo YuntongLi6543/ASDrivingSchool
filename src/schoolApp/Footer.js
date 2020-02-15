@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { 
+	Container,
+	Row,
+	Col,
+} from 'react-bootstrap';
 import '../scss/Footer.scss';
 
 import { withTranslation } from 'react-i18next';
@@ -16,6 +20,7 @@ class Footer extends Component {
 		const { t } = this.props;
         return (
             <div>
+				<style>{`@import url(https://use.fontawesome.com/releases/v5.6.3/css/all.css)`}</style>
 				<footer className="page-footer font-small pt-4">
 					<div className="container text-center text-md-left">
 						<div className="row">
@@ -62,9 +67,28 @@ class Footer extends Component {
 					    </div>
 				  	</div>
 
-					<div className="footer-copyright text-center py-3">
+					<div className="footer-copyright py-3">
 					<Container>
-				  		Copyright @2019 All successful driving school. Developed by Excalibur resume & Culture Service.
+						<Row>
+							<Col lg="10" className="copyright">
+				  			Copyright @2019 All successful driving school. Developed by Excalibur resume & Culture Service.
+						  
+						  	</Col>
+							<Col lg="2" className="social-media">
+								<a href="https://www.facebook.com/bestinstruction">
+								  <i className="fab fa-facebook-f fa-lg"></i>
+								</a>
+								<a href="#">
+								  <i className="fab fa-twitter fa-lg"></i>
+								</a>
+								<a href="#">
+								  <i className="fab fa-linkedin-in fa-lg"></i>
+								</a>
+								<a href="#">
+								  <i className="fab fa-instagram fa-lg"></i>
+								</a>
+						  	</Col>
+						  </Row>
 					</Container>
 					</div>
 				</footer>

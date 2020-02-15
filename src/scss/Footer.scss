@@ -33,9 +33,39 @@
 	.footer-copyright{
 		background: $copyright;
 		.container{
-			background: $copyright;
-			color:#8f9193;
-			font-size: .9rem;
-		}
+			.copyright,
+			.social-media,
+			.social-media i{
+				background: $copyright;
+				color:#8f9193;
+				padding: 0;
+			}
+			.copyright{
+				font-size: .9rem;
+			}
+			.social-media{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.social-media i{
+				cursor: pointer;
+			}
+			.social-media i:hover{
+				color: #fff;
+			}
+		}	
+	}
+}
+@media screen and (max-width: 768px){
+	.copyright{
+		text-align: center;
+	}
+	.social-media{
+		justify-content: center!important;
+		padding-top: 10px!important;
+	}
+	.social-media i{
+		margin: 0 10px;
 	}
 }
