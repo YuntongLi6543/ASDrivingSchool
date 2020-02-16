@@ -25,11 +25,45 @@ class SchoolUpdate extends Component {
 
     render() {
         const { t } = this.props;
+        const shareUrl = 'http://github.com';
+        const title = 'DEMO';
 
         return (
             <div>
                 <Container>
                     <h2 className="page-title">{t('schoolUpdate.pageTitle')}</h2>
+                    <div className = "shareBotton">
+                        <EmailShareButton
+                            url={shareUrl}
+                            quote={title}
+                            className="Demo__some-network__share-button"
+                        >
+                            <EmailIcon size={32} round />
+                        </EmailShareButton>
+                        <TwitterShareButton 
+                            url={shareUrl}
+                            quote={title}
+                            className="Demo__some-network__share-button"
+                        >
+                            <TwitterIcon size={32} round />
+            
+                        </TwitterShareButton>
+                        <WeiboShareButton 
+                            url={shareUrl}
+                            quote={title}
+                            className="Demo__some-network__share-button"
+                        >
+                            <WeiboIcon size={32} round />
+            
+                        </WeiboShareButton>
+                        <FacebookShareButton
+                            url={shareUrl}
+                            quote={title}
+                            className="Demo__some-network__share-button"
+                        >
+                            <FacebookIcon size={32} round />
+                        </FacebookShareButton>
+                    </div>
                     <div className="updateDetails">
                         <div id="first">
                             <Container>
@@ -37,12 +71,7 @@ class SchoolUpdate extends Component {
                                     <Card.Body>
                                         <h4 id="newsTitle1" >{t('SchoolUpdate.news1Title')}</h4>
                                         <p id="intro1">{t('SchoolUpdate.news1Text')}</p>
-                                        <div className = "shareBotton">
-                                            <EmailShareButton><EmailIcon></EmailIcon></EmailShareButton>
-                                            <TwitterShareButton><TwitterIcon></TwitterIcon></TwitterShareButton>
-                                            <WeiboShareButton><WeiboIcon></WeiboIcon></WeiboShareButton>
-                                            <FacebookShareButton><FacebookIcon></FacebookIcon></FacebookShareButton>
-                                        </div>
+
                                     </Card.Body>
                                 </Card>
                             </Container>
@@ -53,12 +82,6 @@ class SchoolUpdate extends Component {
                                     <Card.Body>
                                         <h4 id="newsTitle2" >{t('SchoolUpdate.news2Title')}</h4>
                                         <p id="intro2">{t('SchoolUpdate.news2Text')}</p>
-                                        <div className = "shareBotton">
-                                            <EmailShareButton><EmailIcon></EmailIcon></EmailShareButton>
-                                            <TwitterShareButton><TwitterIcon></TwitterIcon></TwitterShareButton>
-                                            <WeiboShareButton><WeiboIcon></WeiboIcon></WeiboShareButton>
-                                            <FacebookShareButton><FacebookIcon></FacebookIcon></FacebookShareButton>
-                                        </div>
                                     </Card.Body>
                                 </Card>
                             </Container>
@@ -69,12 +92,6 @@ class SchoolUpdate extends Component {
                                     <Card.Body>
                                         <h4 id="newsTitle3" >{t('SchoolUpdate.news3Title')}</h4>
                                         <p id="intro3">{t('SchoolUpdate.news3Text')}</p>
-                                        <div className = "shareBotton">
-                                            <EmailShareButton><EmailIcon></EmailIcon></EmailShareButton>
-                                            <TwitterShareButton><TwitterIcon></TwitterIcon></TwitterShareButton>
-                                            <WeiboShareButton><WeiboIcon></WeiboIcon></WeiboShareButton>
-                                            <FacebookShareButton><FacebookIcon></FacebookIcon></FacebookShareButton>
-                                        </div>
                                     </Card.Body>
                                 </Card>
                             </Container>
