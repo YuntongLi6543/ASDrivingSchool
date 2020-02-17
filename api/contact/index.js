@@ -16,8 +16,8 @@ var transporter = nodemailer.createTransport({
     secure: false,
 
     auth: {
-      user: '',  // Change email address, from 
-      pass: ''             // your email password
+      user: 'yuntong.li000000@gmail.com',  // Change email address, from 
+      pass: '1234@abcd'             // your email password
       // if have errors during runtime, try turn off 'Less secure app access' in https://myaccount.google.com/security
   }
 });
@@ -38,7 +38,7 @@ router.post('/myData', (req, res, next) => {
 
   var mail = {
     from: name,
-    to: 'xxx@gmail.com',  // Change to email address that you want to receive messages on
+    to: 'yuntong.li000000@gmail.com',  // Change to email address that you want to receive messages on
     subject: 'New Message from Contact Us Page',
     text: content
   }

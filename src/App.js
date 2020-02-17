@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 
+import ScrollToTopButton from "./schoolApp/ScrollToTop.js";
+
 import TopBar from './schoolApp/TopBar.js';
 import Home from './schoolApp/Home.js';
 import Courses from './schoolApp/Courses.js';
@@ -32,6 +34,7 @@ class App extends Component {
     return (
       <BrowserRouter>
           <TopBar />
+          <ScrollToTopButton />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/home" component={Home} />
