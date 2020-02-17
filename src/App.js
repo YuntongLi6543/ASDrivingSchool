@@ -14,6 +14,8 @@ import Footer from './schoolApp/Footer.js';
 import OnlineVideo from './schoolApp/OnlineVideo';
 import G2OnlineVideo from './schoolApp/G2OnlineVideo';
 import GOnlineVideo from './schoolApp/GOnlineVideo';
+import ClassSchedule from './schoolApp/ClassSchedule';
+import SchoolUpdate from './schoolApp/SchoolUpdate';
 
 import { withTranslation } from 'react-i18next';
 
@@ -41,6 +43,8 @@ class App extends Component {
           <Route path="/G-online-video" component={GOnlineVideo} />
           <Route path="/G2-online-video" component={G2OnlineVideo} />
           <Route path="/online-video" component={OnlineVideo} />
+          <Route path="/class-schedule" component={ClassSchedule} />
+          <Route path="/school-update" component={SchoolUpdate} />
           <Redirect from="/*" to="/" />
         </Switch>
         <div>
