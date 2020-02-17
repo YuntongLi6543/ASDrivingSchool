@@ -18,16 +18,14 @@ class AboutUs extends Component {
 		const { t } = this.props;
         return (
         	<div className="AboutUs">
-	            <Container className="ASTitle">
+	            <Container>
 		            <Row>
-		            	<Col xs={12} md={12} className="title">
-		            	
-					      <h2 className="AU-Header">{t('aboutUs.aboutASDrivingSchool')}</h2>
-					    
+		            	<Col xs={12} md={12}>
+					      <h2 className="page-title">{t('aboutUs.aboutASDrivingSchool')}</h2>
 					    </Col>
 						{/* introduction */}
 					    <Col xs={12} md={5}>
-					       <Card.Img className="Image" src="pic1.jpg" />
+					       <Card.Img className="schoolImage" src={require(`../assets/img/asdrivingschool.png`)} />
 					    </Col>
 
 					    <Col xs={12} md={7}>
@@ -59,7 +57,7 @@ class AboutUs extends Component {
 					    	</p>
 					    </Col>
 						<Col xs={12} md={5} >
-						    <Card.Img className="Image" src="coach-zhang.png" />
+						    <Card.Img className="Image" src={require(`../assets/img/coach-zhang.png`)} />
 						</Col>
 					</Row>
 					</Row>
@@ -69,7 +67,7 @@ class AboutUs extends Component {
 				<Container className="coach-zhou">
 					<Row>
 					    <Col xs={12} md={5}>
-					       <Card.Img className="Image" src="coach-zhou.png" />
+					       <Card.Img className="Image" src={require(`../assets/img/coach-zhou.png`)} />
 					    </Col>
 
 					    <Col xs={12} md={7}>
@@ -91,7 +89,7 @@ class AboutUs extends Component {
 					    	</p>
 					    </Col>
 					    <Col xs={12} md={5}>
-					       <Card.Img className="Image" src="coach-hao.png" />
+					       <Card.Img className="Image" src={require(`../assets/img/coach-hao.png`)} />
 					    </Col>
 					</Row>
 	            </Container>

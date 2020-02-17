@@ -78,13 +78,13 @@ class Footer extends Component {
 								<a href="https://www.facebook.com/bestinstruction">
 								  <i className="fab fa-facebook-f fa-lg"></i>
 								</a>
-								<a href="#">
+								<a href="https://www.facebook.com/bestinstruction">
 								  <i className="fab fa-twitter fa-lg"></i>
 								</a>
-								<a href="#">
+								<a href="https://www.facebook.com/bestinstruction">
 								  <i className="fab fa-linkedin-in fa-lg"></i>
 								</a>
-								<a href="#">
+								<a href="https://www.facebook.com/bestinstruction">
 								  <i className="fab fa-instagram fa-lg"></i>
 								</a>
 						  	</Col>

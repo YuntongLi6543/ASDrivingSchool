@@ -119,16 +119,16 @@ class Home extends Component {
 				<section className="section p-0 mb-5 all-slide" width='100%'>
 					<div className="d-flex">
 						{/* <div className="p-0 m-0"> */}
-							<Carousel
-								activeIndex={this.state.activeIndex}
-								next={this.nextCarouselPage}
-								previous={this.previousCarouselPage}
-							>
-								<CarouselIndicators items={items} activeIndex={this.state.activeIndex} onClickHandler={this.goToCarouselPage} />
-								{slides}
-								<CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previousCarouselPage} />
-								<CarouselControl direction="next" directionText="Next" onClickHandler={this.nextCarouselPage} />
-							</Carousel>
+						<Carousel
+							activeIndex={this.state.activeIndex}
+							next={this.nextCarouselPage}
+							previous={this.previousCarouselPage}
+						>
+							<CarouselIndicators items={items} activeIndex={this.state.activeIndex} onClickHandler={this.goToCarouselPage} />
+							{slides}
+							<CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previousCarouselPage} />
+							<CarouselControl direction="next" directionText="Next" onClickHandler={this.nextCarouselPage} />
+						</Carousel>
 						{/* </div> */}
 					</div>
 				</section>
@@ -148,12 +148,14 @@ class Home extends Component {
 												<p className="first-card-text">
 													{t('homePageFirstCardGroup.card1Text')}
 												</p>
-												<Button
-													className="mt-4 our-server-btn"
-													color="primary"
-												>
-													{t('homePageFirstCardGroup.card1Button')}
-												</Button>
+												<Link className="nav-link" to="/courses">
+													<Button
+														className="mt-4 our-server-btn"
+														color="primary"
+													>
+														{t('homePageFirstCardGroup.card1Button')}
+													</Button>
+												</Link>
 											</CardBody>
 										</Card>
 									</Col>
@@ -167,12 +169,14 @@ class Home extends Component {
 												<p className="first-card-text">
 													{t('homePageFirstCardGroup.card2Text')}
 												</p>
-												<Button
-													className="mt-4 our-server-btn"
-													color="primary"
-												>
-													{t('homePageFirstCardGroup.card2Button')}
-												</Button>
+												<Link className="nav-link" to="/online-translation">
+													<Button
+														className="mt-4 our-server-btn"
+														color="primary"
+													>
+														{t('homePageFirstCardGroup.card2Button')}
+													</Button>
+												</Link>
 											</CardBody>
 										</Card>
 									</Col>
@@ -186,12 +190,14 @@ class Home extends Component {
 												<p className="first-card-text">
 													{t('homePageFirstCardGroup.card3Text')}
 												</p>
-												<Button
-													className="mt-4 our-server-btn"
-													color="primary"
-												>
-													{t('homePageFirstCardGroup.card3Button')}
-												</Button>
+												<Link className="nav-link" to="/online-resources">
+													<Button
+														className="mt-4 our-server-btn"
+														color="primary"
+													>
+														{t('homePageFirstCardGroup.card3Button')}
+													</Button>
+												</Link>
 											</CardBody>
 										</Card>
 									</Col>
@@ -202,22 +208,22 @@ class Home extends Component {
 				</section>
 
 				<div className="contact-us">
-				<Container>
-					<p>ARE YOU LOOKING FOR A DRIVING SCHOOL IN CANADA?
+					<Container>
+						<p>ARE YOU LOOKING FOR A DRIVING SCHOOL IN CANADA?
 					</p>
-					<Link className="contact-btn btn btn-primary" to="/contact-us" role="button">Contact Us</Link>
-				</Container>
+						<Link className="contact-btn btn btn-primary" to="/contact-us" role="button">Contact Us</Link>
+					</Container>
 				</div>
 
 				<section className="mt-5 section section-lg pt-lg-0">
 					<Container>
 						<Row className="justify-content-center text-center">
 							<Col lg="12" className="p-0">
-							<h2 className="mb-5">{t('homePageSecondCardGroup.groupTitle')}</h2>
+								<h2 className="mb-5">{t('homePageSecondCardGroup.groupTitle')}</h2>
 								<Row className="row-grid">
 									<Col lg="4">
 										<Card className="card-lift--hover shadow border-0">
-											<img src="coach-zhang.png" className="second-card-img" alt="..." />
+											<img src={require(`../assets/img/coach-zhang.png`)} className="second-card-img" alt="..." />
 											<CardBody className="py-5 second-card-body">
 												<h6 className="text-uppercase">
 													{t('homePageSecondCardGroup.card1Text')}
@@ -225,18 +231,20 @@ class Home extends Component {
 												<p className="description mt-2 mb-1">
 													{t('homePageSecondCardGroup.card1Phone')}
 												</p>
-												<Button
-													className="mt-4 our-server-btn"
-													color="primary"
-												>
-													{t('homePageSecondCardGroup.card1Button')}
-												</Button>
+												<Link className="nav-link" to="/about-us">
+													<Button
+														className="mt-4 our-server-btn"
+														color="primary"
+													>
+														{t('homePageSecondCardGroup.card1Button')}
+													</Button>
+												</Link>
 											</CardBody>
 										</Card>
 									</Col>
 									<Col lg="4">
 										<Card className="card-lift--hover shadow border-0">
-											<img src="coach-zhou.png" className="second-card-img" alt="..." />
+											<img src={require(`../assets/img/coach-zhou.png`)} className="second-card-img" alt="..." />
 											<CardBody className="py-5 second-card-body">
 												<h6 className="text-uppercase">
 													{t('homePageSecondCardGroup.card2Text')}
@@ -244,18 +252,20 @@ class Home extends Component {
 												<p className="description mt-2 mb-1">
 													{t('homePageSecondCardGroup.card2Phone')}
 												</p>
-												<Button
-													className="mt-4 our-server-btn"
-													color="primary"
-												>
-													{t('homePageSecondCardGroup.card2Button')}
-												</Button>
+												<Link className="nav-link" to="/about-us">
+													<Button
+														className="mt-4 our-server-btn"
+														color="primary"
+													>
+														{t('homePageSecondCardGroup.card2Button')}
+													</Button>
+												</Link>
 											</CardBody>
 										</Card>
 									</Col>
 									<Col lg="4">
 										<Card className="card-lift--hover shadow border-0">
-											<img src="coach-hao.png" className="second-card-img" alt="..." />
+											<img src={require(`../assets/img/coach-hao.png`)} className="second-card-img" alt="..." />
 											<CardBody className="py-5 second-card-body">
 												<h6 className="text-uppercase">
 													{t('homePageSecondCardGroup.card3Text')}
@@ -263,12 +273,14 @@ class Home extends Component {
 												<p className="description mt-2 mb-1">
 													{t('homePageSecondCardGroup.card3Phone')}
 												</p>
-												<Button
-													className="mt-4 our-server-btn"
-													color="primary"
-												>
-													{t('homePageSecondCardGroup.card3Button')}
-												</Button>
+												<Link className="nav-link" to="/about-us">
+													<Button
+														className="mt-4 our-server-btn"
+														color="primary"
+													>
+														{t('homePageSecondCardGroup.card3Button')}
+													</Button>
+												</Link>
 											</CardBody>
 										</Card>
 									</Col>

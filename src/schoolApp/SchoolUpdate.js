@@ -32,6 +32,39 @@ class SchoolUpdate extends Component {
             <div>
                 <Container>
                     <h2 className="page-title">{t('schoolUpdate.pageTitle')}</h2>
+                    <div className="updateDetails">
+                        <div id="first">
+                            <Container>
+                                <Card>
+                                    <Card.Body>
+                                        <h4>{t('schoolUpdate.blog1Title')}</h4>
+                                        <p>{t('schoolUpdate.blog1Text')}</p>
+
+                                    </Card.Body>
+                                </Card>
+                            </Container>
+                        </div>
+                        <div id="second">
+                            <Container>
+                                <Card>
+                                    <Card.Body>
+                                        <h4>{t('schoolUpdate.blog2Title')}</h4>
+                                        <p>{t('schoolUpdate.blog2Text')}</p>
+                                    </Card.Body>
+                                </Card>
+                            </Container>
+                        </div>
+                        <div id="third">
+                            <Container>
+                                <Card>
+                                    <Card.Body>
+                                        <h4>{t('schoolUpdate.blog3Title')}</h4>
+                                        <p>{t('schoolUpdate.blog3Text')}</p>
+                                    </Card.Body>
+                                </Card>
+                            </Container>
+                        </div>
+                    </div>
                     <div className = "shareBotton">
                         <EmailShareButton
                             url={shareUrl}
@@ -63,39 +96,6 @@ class SchoolUpdate extends Component {
                         >
                             <FacebookIcon size={32} round />
                         </FacebookShareButton>
-                    </div>
-                    <div className="updateDetails">
-                        <div id="first">
-                            <Container>
-                                <Card>
-                                    <Card.Body>
-                                        <h4 id="newsTitle1" >{t('SchoolUpdate.news1Title')}</h4>
-                                        <p id="intro1">{t('SchoolUpdate.news1Text')}</p>
-
-                                    </Card.Body>
-                                </Card>
-                            </Container>
-                        </div>
-                        <div id="second">
-                            <Container>
-                                <Card>
-                                    <Card.Body>
-                                        <h4 id="newsTitle2" >{t('SchoolUpdate.news2Title')}</h4>
-                                        <p id="intro2">{t('SchoolUpdate.news2Text')}</p>
-                                    </Card.Body>
-                                </Card>
-                            </Container>
-                        </div>
-                        <div id="third">
-                            <Container>
-                                <Card>
-                                    <Card.Body>
-                                        <h4 id="newsTitle3" >{t('SchoolUpdate.news3Title')}</h4>
-                                        <p id="intro3">{t('SchoolUpdate.news3Text')}</p>
-                                    </Card.Body>
-                                </Card>
-                            </Container>
-                        </div>
                     </div>
                 </Container>
 

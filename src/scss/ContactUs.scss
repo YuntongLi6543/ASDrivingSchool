@@ -2,11 +2,17 @@
 @import'Variables.scss';
 
 .mapouter{
-	position:relative;text-align:right;height:500px;width:600px;
+	margin-top: 60px;
+	position:relative;
+	text-align:right; 
 }
+
 .gmap_canvas {
 	overflow:hidden;
 	background:none!important;
-	height:500px;
-	width:600px;
+}
+
+.form-title {
+	text-align: center;
+	padding: 4% 0 4% 0;     
 }

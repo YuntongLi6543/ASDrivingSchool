@@ -108,18 +108,11 @@ class ContactUs extends Component {
 
 	render() {
 		const { t } = this.props;
+		
 		return (
 			<div>
 				<Container>
-					<div className="mapouter">
-						<div className="gmap_canvas">
-							<iframe title="navigation" width="600" height="500" id="gmap_canvas"
-								src="https://maps.google.com/maps?q=4438%20Sheppard%20Ave.%20E&t=&z=13&ie=UTF8&iwloc=&output=embed"
-								frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" />
-						</div>
-					</div>
-
-					<h3>{t('contactUs.contactForm')}</h3>
+					<h3 className="form-title mt-5">{t('contactUs.contactForm')}</h3>
 					<Form method="POST">
 						<Form.Group as={Row} controlId="formHorizontalPassword">
 							<Form.Label column sm={2}>
@@ -169,6 +162,14 @@ class ContactUs extends Component {
 							{this.state.mailSent && <div>{t('contactUs.thankYou')}</div>}
 						</div>
 					</Form>
+
+					<div className="mapouter">
+						<div className="gmap_canvas">
+							<iframe title="navigation" width="100%" height="500" id="gmap_canvas"
+								src="https://maps.google.com/maps?q=4438%20Sheppard%20Ave.%20E&t=&z=13&ie=UTF8&iwloc=&output=embed"
+								frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" />
+						</div>
+					</div>
 				</Container>
 			</div>
 		);

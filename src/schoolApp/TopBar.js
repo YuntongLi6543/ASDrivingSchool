@@ -33,7 +33,7 @@ class TopBar extends Component {
         <nav className="navbar navbar-expand-lg navbar-light static-top nav-bar">
           <Container>
             <Link className="navbar-brand brand col-xs-8 col-md-6" to="/home">
-              <img className="logo-image" src="LOGO.png" width="100" height="100" alt="" />
+              <img className="logo-image" src={require(`../assets/img/LOGO.png`)} width="100" height="100" alt="" />
               <p className="text-uppercase school-name">{t('topBar.allSuccessfulDrivingSchool')}</p>
             </Link>
 
@@ -59,6 +59,12 @@ class TopBar extends Component {
                 </li>
                 <li className="nav-item online-resource">
                   <Link className="nav-link" to="/online-resources">{t("topBar.onlineResources")}</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/class-schedule">{t("topBar.classSchedule")}</Link>
+                </li>
+                <li className="nav-item online-resource">
+                  <Link className="nav-link" to="/school-update">{t("topBar.schoolUpdate")}</Link>
                 </li>
               </ul>
             </div>

@@ -60,11 +60,11 @@
 				align-self: center;
 				margin: 0;
 				display:inline-block;
-				// float:left;
 				color: $DarkGreen;
 				overflow-wrap: break-word;
 				word-wrap:break-word;
-  				white-space: pre-line;
+				white-space: pre-line;
+				 width:70%;
 
   				@media (min-width:426px) and (max-width: 768px){
 					width:70%;

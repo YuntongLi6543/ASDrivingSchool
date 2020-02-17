@@ -20,7 +20,7 @@ class Courses extends Component {
                     <h2 className="page-title">{t('courses.pageTitle')}</h2>
                     <div className="courseDetails">
                         <div id="firstCourse">
-                            <Container>
+                            <Container className="mt-2">
                                 <h4 id="courseTitle1" >{t('courses.course1Title')}</h4>
                                 <p id="intro1">{t('courses.course1Text')}</p>
                                 <ul className="list-group list-group-flush">
@@ -31,21 +31,20 @@ class Courses extends Component {
                                 </ul>
                             </Container>
                         </div>
-                        <div id="secondCourse">
-                            <Container>
+                        <div id="secondCourse" className="mt-4">
+                            <Container className="mt-2">
                                 <h4 id="courseTitle2" >{t('courses.course2Title')}</h4>
                                 <p id=" intro2">{t('courses.course2Text')}</p>
                             </Container>
                         </div>
-                        <div id="thirdCourse">
-                            <Container>
+                        <div id="thirdCourse" className="mt-4">
+                            <Container className="mt-2">
                                 <h4 id="courseTitle3" >{t('courses.course3Title')}</h4>
                                 <p id="intro3">{t('courses.course3Text')}</p>
                             </Container>
                         </div>
                     </div>
                 </Container>
-
             </div>
         );
     }
