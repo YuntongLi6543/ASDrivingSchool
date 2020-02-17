@@ -8,25 +8,18 @@
 
 .content{
   padding: 0 2%;
-  border:1px solid red;
+  text-align: justify;
+  width:100%;
 }
   
-
-.AboutUs{
-
-  .ASTitle{
-    padding:3% 0;
-    border-bottom: 1px solid #ddd;
-
-    .schoolImage {
-      margin-top: 70px;
-      margin-bottom: 70px;
-    }
-
-    .Image{
-      width: 200px;
-    }
-  }
+.schoolImage {
+  margin-top: 100px;
+  margin-bottom: 70px;
 }
+
+.coachImage{
+  height: 300px;
+}
+
 
 
