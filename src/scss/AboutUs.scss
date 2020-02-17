@@ -1,9 +1,9 @@
 @import'Style.scss'; 
 @import'Variables.scss';
 
-.title{
-  text-align: center;
-  padding: 2% 0 4% 0;     
+.page-title {
+	text-align: center;
+	padding: 4% 0 4% 0;     
 }
 
 .content{
@@ -18,12 +18,13 @@
     padding:3% 0;
     border-bottom: 1px solid #ddd;
 
-    .AU-Header{
-        margin: 0 auto;
+    .schoolImage {
+      margin-top: 70px;
+      margin-bottom: 70px;
     }
 
     .Image{
-      height: 300px;
+      width: 200px;
     }
   }
 }

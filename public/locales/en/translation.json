@@ -5,7 +5,9 @@
         "aboutUs": "About Us",
         "courses": "Featured Course",
         "onlineTranslation": "Online Translation",
-        "onlineResources": "Online Resources"
+        "onlineResources": "Online Resources",
+        "classSchedule": "Class Schedule",
+        "schoolUpdate": "School Update"
     },
     "carsouel": {
         "carsouelCaption1": "Our School Patiently Teach the Best Practice For Defensive Driving",
@@ -75,7 +77,7 @@
         "contactUs": "Contact Us"
     },
     "contactUs": {
-        "contactForm": "CONTACT FORM",
+        "contactForm": "Contact Form",
         "yourName": "Your Name",
         "emailAddress": "Email Address",
         "message": "Message",
@@ -86,10 +88,10 @@
         "pageTitle": "Chinese Driver Licence Online Translation",
         "onlineTranslationContactForm": "Contact Form",
         "cardTitle": "About Translation",
-        "cardText1": "This translation is a translation certificate from the Association of Translators and Interpreters of Ontario (ATIO), officially accredited by the Ministry of Transportation;",
-        "cardText2": "This translation certificate is not responsible for the authenticity of the original documents provided by the customer;",
-        "cardText3": "Please fill in the detailed mailing address, including your full address along with your postal code. If it is an apartment/condo/unit, please include your unit number. If you do not, the courier will return the mailto us and the customer will be responsible for the additional fees;",
-        "cardText4": "The translation certification may take up to 2 business days. After the completion of the translation, we will use Canada Post's Expedited delivery system. The delivery time will take up to 2-3 business days. After the delivery has been sent, we will send an email to inform you of your tracking number. Note: The courier will deliver to your mailbox without signature.",
+        "cardText1": "1. This translation is a translation certificate from the Association of Translators and Interpreters of Ontario (ATIO), officially accredited by the Ministry of Transportation;",
+        "cardText2": "2. This translation certificate is not responsible for the authenticity of the original documents provided by the customer;",
+        "cardText3": "3. Please fill in the detailed mailing address, including your full address along with your postal code. If it is an apartment/condo/unit, please include your unit number. If you do not, the courier will return the mailto us and the customer will be responsible for the additional fees;",
+        "cardText4": "4. The translation certification may take up to 2 business days. After the completion of the translation, we will use Canada Post's Expedited delivery system. The delivery time will take up to 2-3 business days. After the delivery has been sent, we will send an email to inform you of your tracking number. Note: The courier will deliver to your mailbox without signature.",
         "formTitle": "Upload Documents Online",
         "yourName": "Your Name",
         "emailAddress": "Email Address",
@@ -100,18 +102,28 @@
     },
     "courses": {
         "pageTitle": "Our Courses",
-        "course1Title": "",
-        "course1Text": "",
-        "course1ListText1": "",
-        "course1ListText2": "",
-        "course1ListText3": "",
-        "course1ListText4": "",
-        "course2Title": "",
-        "course2Text": "",
-        "course3Title": "",
-        "course3Text": ""
+        "course1Title": "Express Licencing Course",
+        "course1Text": "This course is designed for the people who already have some driving experience and only need to take a couple of in-car lessons. And then go with our professional instructors to take G2 or G road tests to get licences. Characters of this course:",
+        "course1ListText1": "1. Focus on the weaknesses and make improvement fast",
+        "course1ListText2": "2. Book road tests fast",
+        "course1ListText3": "3. Car Rental",
+        "course1ListText4": "4. Pick-up and drop-off service",
+        "course2Title": " Brush-up in-car training",
+        "course2Text": "This course is designed for experienced students who want to refresh improve their driving skills and knowledge or require additional professional training to brush up on some certain skills. They may not need to take road tests.",
+        "course3Title": "Guaranteed Test Pass Package",
+        "course3Text": "This course is designed for students who are testphobia. Their skills and knowledge may not be poor, but they keep failing due to the fear or too nervous to take road tests. Our test package can relieve their stress and reduce the cost so that students can go take the tests with ease. "
     },
-    "onlineResource":{
+    "onlineResource": {
+        "pageTitle": "Online Resource",
         "questionTitle": "Trivia Questionaire"
-      }
+    },
+    "schoolUpdate": {
+        "pageTitle": "School Blog",
+        "blog1Title": "Earundem vigiliam eligendo",
+        "blog1Text": "Earundem vigiliam eligendo in ei pluribus concipio. Expectabam etc meo qui videbuntur quascunque propositio explicetur. Per qui aër iii meos uti idem. Ii gi credimus connivet bonitati. Ei magna mo an satis capax menti majus. Cognita humanam ii caloris testari in. Ii usitate si communi figuras. Co articulo ex attentum in indiciis referrem. ",
+        "blog2Title": "Earundem vigiliam eligendo",
+        "blog2Text": "Earundem vigiliam eligendo in ei pluribus concipio. Expectabam etc meo qui videbuntur quascunque propositio explicetur. Per qui aër iii meos uti idem. Ii gi credimus connivet bonitati. Ei magna mo an satis capax menti majus. Cognita humanam ii caloris testari in. Ii usitate si communi figuras. Co articulo ex attentum in indiciis referrem. ",
+        "blog3Title": "Earundem vigiliam eligendo",
+        "blog3Text": "Earundem vigiliam eligendo in ei pluribus concipio. Expectabam etc meo qui videbuntur quascunque propositio explicetur. Per qui aër iii meos uti idem. Ii gi credimus connivet bonitati. Ei magna mo an satis capax menti majus. Cognita humanam ii caloris testari in. Ii usitate si communi figuras. Co articulo ex attentum in indiciis referrem. "
+    }
 }

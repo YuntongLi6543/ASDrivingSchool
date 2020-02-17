@@ -1,9 +1,13 @@
 @import'Style.scss'; 
 @import'Variables.scss';
 
-.OR-Header{
-	// margin: 0 auto;
-	padding:3% 0 1% 2%; 
+.page-title {
+	text-align: center;
+	padding: 4% 0 4% 0;     
+}
+
+.card-image {
+	height: 350px; 
 }
 
 .nav-pills .nav-link.active{

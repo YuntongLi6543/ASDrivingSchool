@@ -110,7 +110,7 @@ class OnlineTranslation extends Component {
         return (
             <div>
                 <Container>
-                    <h3 className="page-title">{t('onlineTranslation.pageTitle')}</h3>
+                    <h2 className="page-title">{t('onlineTranslation.pageTitle')}</h2>
                     <Card>
                         <Card.Title className="card-title">
                             {t('onlineTranslation.cardTitle')}
@@ -127,10 +127,10 @@ class OnlineTranslation extends Component {
                     <Form method="POST">
                         <h4 className="form-title">{t('onlineTranslation.formTitle')}</h4>
                         <Form.Group as={Row} controlId="formHorizontalPassword">
-                            <Form.Label column sm={2}>
+                            <Form.Label column sm={3}>
                                 {t('onlineTranslation.yourName')}
                             </Form.Label>
-                            <Col sm={10}>
+                            <Col sm={9}>
                                 <Form.Control type="name"
                                     onChange={this.handleChange.bind(this, "name")}
                                     value={this.state.fields["name"] || ''}
@@ -140,10 +140,10 @@ class OnlineTranslation extends Component {
                         </Form.Group>
 
                         <Form.Group as={Row} controlId="formHorizontalEmail">
-                            <Form.Label column sm={2}>
+                            <Form.Label column sm={3}>
                                 {t('onlineTranslation.emailAddress')}
                             </Form.Label>
-                            <Col sm={10}>
+                            <Col sm={9}>
                                 <Form.Control type="email"
                                     onChange={this.handleChange.bind(this, "email")}
                                     value={this.state.fields["email"] || ''}
@@ -153,10 +153,10 @@ class OnlineTranslation extends Component {
                         </Form.Group>
 
                         <Form.Group as={Row} controlId="formHorizontalEmail">
-                            <Form.Label column sm={2}>
+                            <Form.Label column sm={3}>
                                 {t('onlineTranslation.phoneNumber')}
                             </Form.Label>
-                            <Col sm={10}>
+                            <Col sm={9}>
                                 <Form.Control type="phoneNumber"
                                     onChange={this.handleChange.bind(this, "phoneNumber")}
                                     value={this.state.fields["phoneNumber"] || ''}
@@ -166,16 +166,16 @@ class OnlineTranslation extends Component {
                         </Form.Group>
 
                         <Form.Group as={Row} controlId="exampleForm.ControlTextarea1">
-                            <Form.Label column sm={2}>
+                            <Form.Label column sm={3}>
                                 {t('onlineTranslation.uploadFile')}
                             </Form.Label>
-                            <Col sm={10}>
+                            <Col sm={9}>
                                 <input type="file" name="myFile" />
                             </Col>
                         </Form.Group>
 
                         <Form.Group as={Row}>
-                            <Col sm={{ span: 10, offset: 2 }}>
+                            <Col sm={{ span: 10, offset: 3 }}>
                                 <Button type="submit" onClick={e => this.handleFormSubmit(e)}>{t('onlineTranslation.submit')}</Button>
                             </Col>
                         </Form.Group>

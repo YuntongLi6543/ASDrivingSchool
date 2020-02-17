@@ -45,7 +45,7 @@ class ScrollToTop extends React.Component {
                 </button>
                 <div id="popup" className="popupBox arrow_box">
 
-                    <img src="wechat-qrcode.jpg" alt="qrcode"/>
+                    <img src={require(`../assets/img/wechat-qrcode.jpg`)} alt="qrcode"/>
                 </div>
                 
             </div>
