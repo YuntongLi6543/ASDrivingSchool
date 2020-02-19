@@ -115,7 +115,8 @@
     },
     "onlineResource": {
         "pageTitle": "Online Resource",
-        "questionTitle": "Trivia Questionaire"
+        "questionTitle": "Trivia Questionaire",
+        "onlineTest": "Online Test"
     },
     "schoolUpdate": {
         "pageTitle": "School Blog",

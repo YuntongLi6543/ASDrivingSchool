@@ -39,7 +39,6 @@ class SchoolUpdate extends Component {
                                     <Card.Body>
                                         <h4>{t('schoolUpdate.blog1Title')}</h4>
                                         <p>{t('schoolUpdate.blog1Text')}</p>
-
                                     </Card.Body>
                                 </Card>
                             </Container>
@@ -98,7 +97,6 @@ class SchoolUpdate extends Component {
                         </FacebookShareButton>
                     </div>
                 </Container>
-
             </div>
         );
     }

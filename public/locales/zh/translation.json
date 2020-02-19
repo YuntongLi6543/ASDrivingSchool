@@ -114,10 +114,6 @@
     "course3Title": "包考包过",
     "course3Text": "这个课程是为有考试恐惧症的人设计的。这些人群中很多人驾驶技能并不低，但只因害怕考试而不敢去考试或屡屡失败。我们提供的包考项目可以减轻考试压力，减少经济负担，使学生轻松应对路考"
   },
-  "onlineResource": {
-    "pageTitle": "在线资源",
-    "questionTitle": "加拿大安省|G1笔试 | 最新最全|中文笔试题库"
-  },
   "classSchedule": {
     "pageTitle": "理论课安排",
     "day1": "DAY 1",
@@ -181,6 +177,11 @@
     "day4Part2Text1": "路试G2/G",
     "day4Part2Text2": "车辆保养",
     "day4Part2Text3": "汽车保险"
+  },
+  "onlineResource": {
+    "pageTitle": "在线资源",
+    "questionTitle": "加拿大安省|G1笔试 | 最新最全|中文笔试题库",
+    "onlineTest": "在线测试"
   },
   "schoolUpdate": {
     "pageTitle": "学校博客",

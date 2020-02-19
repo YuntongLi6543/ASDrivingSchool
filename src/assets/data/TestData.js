@@ -1,25 +1,15 @@
 export const englishTest = [
     {
         key: '0',
-        src: "assets/img/test/",
-        question: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
-        answer: '',
+        question: "englishRoadSigns-1.png",
+        answer: 'A',
     }
 ];
 
 export const chineseTest = [
     {
         key: '0',
-        src: "assets/img/test/",
-        question: '',
-        optionA: '',
-        optionB: '',
-        optionC: '',
-        optionD: '',
-        answer: '',
+        question: "chineseRoadSigns-1.png",
+        answer: 'A',
     }
 ];
