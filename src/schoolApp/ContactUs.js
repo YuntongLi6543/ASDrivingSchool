@@ -77,15 +77,11 @@ class ContactUs extends Component {
 			})
 				.then((response) => {
 					if (response.data.status === true) {
-						// console.log("Message Sent. Thank you for contcting us."); 
 						this.setState({
 							mailSent: true
 						});
 						this.setState({ error: false });
 						this.resetForm();
-						// console.log(response);
-						// console.log(this.state);
-						// console.log("2: ", this.state.mailSent);
 					} else if (response.data.status === false) {
 						console.log("Message failed to send.");
 					}
