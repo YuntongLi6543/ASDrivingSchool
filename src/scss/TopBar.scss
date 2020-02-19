@@ -4,14 +4,13 @@
 .nav-part{
 	height: 40%;
 	border-bottom:1px solid #ddd;
+	
 
 	.top-nav-bar{
 		height: 10%;
 		width: 100%;
 		background:$DarkGreen;
-		// padding: 0 11%;
-		
-
+	
 		.language{
 			background:$DarkGreen;
 			display: flex;
@@ -39,7 +38,7 @@
 		height: 20%;
 
 		.brand{
-			width: 55%;
+			width: 30%;
 			display:block;
 			margin: 0;
 			display:flex;
@@ -64,16 +63,16 @@
 				overflow-wrap: break-word;
 				word-wrap:break-word;
 				white-space: pre-line;
-				 width:70%;
-
-  				@media (min-width:426px) and (max-width: 768px){
-					width:70%;
-				}
+				width:200px;
 
 				@media (max-width:426px) {
-					width:60%;
+					width:50%;
 				}
 			}
+		}
+		.menu-nav{
+			width: 70%x;
+			padding: 0;
 		}
 		.online-resource a{
 			padding-right: 0;
@@ -87,6 +86,15 @@
 	.navbar-light .navbar-nav .nav-link:focus, 
 	.navbar-light .navbar-nav .nav-link:hover{
 		color: $DarkGreen!important;
+	}
+	@media (min-width:768px) and (max-width: 1024px){
+		.brand{
+			font-size: 1.2rem;
+		}
+		.navbar-light .navbar-nav .nav-link {
+			font-size:14px!important;
+			padding: 5px;
+		}
 	}
 
 }

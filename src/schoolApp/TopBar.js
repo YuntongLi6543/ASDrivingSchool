@@ -32,7 +32,7 @@ class TopBar extends Component {
         </div>
         <nav className="navbar navbar-expand-lg navbar-light static-top nav-bar">
           <Container>
-            <Link className="navbar-brand brand col-xs-8 col-md-6" to="/home">
+            <Link className="navbar-brand brand col-xs-8" to="/home">
               <img className="logo-image" src={require(`../assets/img/LOGO.png`)} width="100" height="100" alt="" />
               <p className="text-uppercase school-name">{t('topBar.allSuccessfulDrivingSchool')}</p>
             </Link>
@@ -41,7 +41,7 @@ class TopBar extends Component {
               <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse" id="navbarResponsive">
+            <div className="collapse navbar-collapse menu-nav" id="navbarResponsive">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <Link className="nav-link" to="/home">{t("topBar.home")}
