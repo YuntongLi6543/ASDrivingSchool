@@ -1,21 +1,16 @@
-#topButton{
+#top-button{
     background-color: #ddd;
     border-radius: 5px;
-    
-    button{
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        opacity: .8; 
-    } 
 }
 .wechat{
     position: fixed;
     bottom:60px;
     right:10px;
-    z-index:999;
-    
+    z-index:999; 
+}
+#top-button,.wechat{
     button{
+        outline:none;
         width: 50px;
         height: 50px;
         cursor: pointer;
@@ -39,11 +34,11 @@
         z-index: 999;
       }  
 }
-.arrow_box {
+.arrow-box {
 	position: relative;
 	background: #ddd;
 }
-.arrow_box:after {
+.arrow-box:after {
 	left: 100%;
 	top: 80%;
 	border: solid transparent;
@@ -58,7 +53,7 @@
 	margin-top: -10px;
 }
  
-.popupBox {
+.popup-box {
     visibility: hidden;
     opacity: 0;
     -webkit-transition:visibility 0s linear 0.3s, opacity 0.3s linear;
@@ -74,7 +69,7 @@
     -o-transition-delay:1s;
     transition-delay: 1s;
 }
-.popupHoverElement:hover > .popupBox {
+.popup-hover-element:hover > .popup-box {
     visibility:visible;
     opacity:1;
     -webkit-transition: all 0.3s ease;
@@ -99,7 +94,7 @@
     z-index:999;
 }
 @media screen and (max-width: 768px){
-    #topButton,
+    #top-button,
     .wechat{
         button{
             width: 35px;
@@ -111,7 +106,7 @@
         right:20px;
     }
     .wechat{
-        bottom:48px;
+        bottom:45px;
     }
     #popup {
         right: 48px;

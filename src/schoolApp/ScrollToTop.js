@@ -39,17 +39,17 @@ class ScrollToTop extends React.Component {
 
     return (
         <div>
-            <div className="wechat popupHoverElement">
+            <div className="wechat popup-hover-element">
                 <button>
                     <i className="fab fa-weixin fa-lg"></i>
                 </button>
-                <div id="popup" className="popupBox arrow_box">
+                <div id="popup" className="popup-box arrow-box">
 
                     <img src={require(`../assets/img/wechat-qrcode.jpg`)} alt="qrcode"/>
                 </div>
                 
             </div>
-            <div className={show ? 'shown' : 'notshown'} id="topButton">
+            <div className={show ? 'shown' : 'notshown'} id="top-button">
                 <button onClick={this.scrollToTop}>
                     <i className="fa fa-arrow-up" aria-hidden="true"></i>
                 </button>
