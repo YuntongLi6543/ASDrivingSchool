@@ -4,13 +4,10 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import axios from "axios";
 import '../scss/ContactUs.scss';
 
 import { withTranslation } from 'react-i18next';
 import i18next from 'i18next';
-
-const API_PATH = 'http://localhost:3000/myData';
 
 class ContactUs extends Component {
 	constructor(props) {
@@ -18,13 +15,19 @@ class ContactUs extends Component {
 		this.state = {
 			fields: {},
 			errors: {},
-			mailSent: false,
 			error: null
 		}
+		this.sendMail = this.sendMail.bind(this);
 	}
 
 	handleClick(lang) {
 		i18next.changeLanguage(lang);
+	}
+
+	handleChange(field, e) {
+		let fields = this.state.fields;
+		fields[field] = e.target.value;
+		this.setState({ fields });
 	}
 
 	handleValidation() {
@@ -62,46 +65,32 @@ class ContactUs extends Component {
 		this.setState({ errors: errors });
 		return formIsValid;
 	}
-
-	handleFormSubmit(e) {
-		e.preventDefault();
+	sendMail() {
+		let fields = this.state.fields;
 		this.setState({
 			mailSent: false
 		});
 
 		if (this.handleValidation()) {
-			axios({
-				method: 'post',
-				url: API_PATH,
-				data: this.state,
+
+			window.Email.send({
+				Host : "smtp.gmail.com",
+				Username : "yuntong.li000000@gmail.com",
+				Password : "1234@abcd",
+				To : 'yuntong.li000000@gmail.com',
+				From : "yuntong.li000000@gmail.com",
+				Subject : `Contact us: ${fields['name']} - ${fields['email']}`,
+				Body : `Message: ${fields['message']}`
+			}).then(
+				message => {
+					this.setState({
+						mailSent: true,
+						error: false,
+						fields: {}
+					});
 			})
-				.then((response) => {
-					if (response.data.status === true) {
-						this.setState({
-							mailSent: true
-						});
-						this.setState({ error: false });
-						this.resetForm();
-					} else if (response.data.status === false) {
-						console.log("Message failed to send.");
-					}
-				})
-
 		}
-	};
-
-	resetForm() {
-		this.setState({
-			fields: {}
-		});
 	}
-
-	handleChange(field, e) {
-		let fields = this.state.fields;
-		fields[field] = e.target.value;
-		this.setState({ fields });
-	}
-
 	render() {
 		const { t } = this.props;
 		
@@ -109,13 +98,14 @@ class ContactUs extends Component {
 			<div>
 				<Container>
 					<h3 className="form-title mt-5">{t('contactUs.contactForm')}</h3>
-					<Form method="POST">
+
+					<Form>
 						<Form.Group as={Row} controlId="formHorizontalPassword">
 							<Form.Label column sm={2}>
 								{t('contactUs.yourName')}
 							</Form.Label>
 							<Col sm={10}>
-								<Form.Control type="name"
+								<Form.Control name="name"
 									onChange={this.handleChange.bind(this, "name")}
 									value={this.state.fields["name"] || ''}
 								/>
@@ -151,11 +141,12 @@ class ContactUs extends Component {
 
 						<Form.Group as={Row}>
 							<Col sm={{ span: 10, offset: 2 }}>
-								<Button type="submit" onClick={e => this.handleFormSubmit(e)}>{t('contactUs.submit')}</Button>
+								<Button onClick={this.sendMail}>{t('contactUs.submit')}</Button>
 							</Col>
 						</Form.Group>
+
 						<div>
-							{this.state.mailSent && <div>{t('contactUs.thankYou')}</div>}
+							{this.state.mailSent && <div style={{ color: "#006935" }}>{t('contactUs.thankYou')}</div>}
 						</div>
 					</Form>
 
@@ -171,4 +162,5 @@ class ContactUs extends Component {
 		);
 	}
 }
+
 export default withTranslation()(ContactUs);
