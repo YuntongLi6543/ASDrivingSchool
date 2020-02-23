@@ -101,6 +101,7 @@ class OnlineTest extends Component {
                     onlineTest =
                         <div>
                             <img src={require(`../assets/img/test/englishTestImg/${englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].question}`)} className="second-card-img" alt="..." />
+                            {/* annie (4个选项，一个文字正确答案，一个下一题按钮，样式，居中 主题绿色) */}
                             <button onClick={() => this.checkAnswer('A', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>A</button>
                             <button onClick={() => this.checkAnswer('B', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>B</button>
                             <button onClick={() => this.checkAnswer('C', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>C</button>
@@ -116,6 +117,7 @@ class OnlineTest extends Component {
                 onlineTest =
                     <div>
                         <img src={require(`../assets/img/test/englishTestImg/${englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].question}`)} className="second-card-img" alt="..." />
+                        {/* annie (4个选项，一个文字正确答案，一个下一题按钮，样式，居中 主题绿色) */}
                         <button onClick={() => this.checkAnswer('A', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>A</button>
                         <button onClick={() => this.checkAnswer('B', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>B</button>
                         <button onClick={() => this.checkAnswer('C', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>C</button>
@@ -128,6 +130,7 @@ class OnlineTest extends Component {
             if (roadSignsRandomTest[this.state.roadSignsTestIndex] === undefined
                 && roadRulesRandomTest[this.state.roadRulesTestIndex] === undefined) {
                 onlineTest =
+                    //annie (button 样式，居中 主题绿色)
                     <Button
                         className="mt-4 our-server-btn"
                         color="primary"
@@ -142,6 +145,7 @@ class OnlineTest extends Component {
                     onlineTest =
                         <div>
                             <img src={require(`../assets/img/test/chineseTestImg/${chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].question}`)} className="second-card-img" alt="..." />
+                            {/* annie (4个选项，一个文字正确答案，一个下一题按钮，样式，居中 主题绿色) */}
                             <button onClick={() => this.checkAnswer('A', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>A</button>
                             <button onClick={() => this.checkAnswer('B', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>B</button>
                             <button onClick={() => this.checkAnswer('C', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>C</button>
@@ -157,6 +161,7 @@ class OnlineTest extends Component {
                 onlineTest =
                     <div>
                         <img src={require(`../assets/img/test/chineseTestImg/${chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].question}`)} className="second-card-img" alt="..." />
+                        {/* annie (4个选项，一个文字正确答案，一个下一题按钮，样式，居中 主题绿色) */}
                         <button onClick={() => this.checkAnswer('A', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>A</button>
                         <button onClick={() => this.checkAnswer('B', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>B</button>
                         <button onClick={() => this.checkAnswer('C', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>C</button>
@@ -169,6 +174,7 @@ class OnlineTest extends Component {
             if (roadSignsRandomTest[this.state.roadSignsTestIndex] === undefined
                 && roadRulesRandomTest[this.state.roadRulesTestIndex] === undefined) {
                 onlineTest =
+                    //annie (button 样式，居中 主题绿色，同中文样式)
                     <Button
                         className="mt-4 our-server-btn"
                         color="primary"
