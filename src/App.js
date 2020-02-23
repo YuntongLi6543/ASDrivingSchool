@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 
 import ScrollToTopButton from "./schoolApp/ScrollToTop.js";
+import ScrollIntoView from "./schoolApp/ScrollIntoView";
 
 import TopBar from './schoolApp/TopBar.js';
 import Home from './schoolApp/Home.js';
@@ -34,6 +35,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
+        <ScrollIntoView>
           <TopBar />
           <ScrollToTopButton />
         <Switch>
@@ -55,6 +57,7 @@ class App extends Component {
         <div>
           <Footer />
         </div>
+        </ScrollIntoView>
       </BrowserRouter>
     )
   }

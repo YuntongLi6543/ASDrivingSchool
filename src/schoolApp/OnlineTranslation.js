@@ -5,14 +5,11 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import axios from "axios";
 import '../scss/OnlineTranslation.scss';
 import '../scss/ContactUs.scss';
 
 import { withTranslation } from 'react-i18next';
 import i18next from 'i18next';
-
-const API_PATH = 'http://localhost:3000/myData';
 
 class OnlineTranslation extends Component {
     constructor(props) {
@@ -21,8 +18,11 @@ class OnlineTranslation extends Component {
             fields: {},
             errors: {},
             mailSent: false,
-            error: null
+            error: null,
+            selectedFile: null,
+            fileValue: "",
         }
+        this.sendMail = this.sendMail.bind(this);
     }
 
     handleClick(lang) {
@@ -55,47 +55,68 @@ class OnlineTranslation extends Component {
                 errors["email"] = "Email is not valid";
             }
         }
-        //Message
-        if (!fields["message"]) {
+        //phone number
+        if (!fields["phoneNumber"]) {
             formIsValid = false;
-            errors["message"] = "Cannot be empty";
+            errors["phoneNumber"] = "Cannot be empty";
+        }
+        //File 
+        if (!this.selectedFile) {
+            formIsValid = false;
+            errors["file"] = "Cannot be empty";
         }
 
         this.setState({ errors: errors });
         return formIsValid;
     }
 
-    handleFormSubmit(e) {
-        e.preventDefault();
+    sendMail() {
+        let fields = this.state.fields;
         this.setState({
-            mailSent: false
+			mailSent: false
         });
+        const self = this;
+		if (this.handleValidation()) {
 
-        if (this.handleValidation()) {
-            axios({
-                method: 'post',
-                url: API_PATH,
-                data: this.state,
-            })
-                .then((response) => {
-                    if (response.data.status === true) {
-                        this.setState({
-                            mailSent: true
+            var file = this.selectedFile;
+            var reader = new FileReader();
+            reader.readAsBinaryString(file);
+            reader.onload = function () {
+                var datauri = "data:" + file.type + ";base64," + btoa(reader.result);
+                window.Email.send({
+                    Host : "smtp.gmail.com",
+				    Username : "yuntong.li000000@gmail.com",
+				    Password : "1234@abcd",
+				    To : 'yuntong.li000000@gmail.com',
+				    From : "yuntong.li000000@gmail.com",
+				    Subject : `Online Translation: ${fields['name']} - ${fields['phoneNumber']}`,
+                    Body : `Email: ${fields['email']}`,
+                    Attachments : [
+                       {
+                           name : file.name,
+                           data : datauri
+                       }]
+                }).then(
+                    message => {
+                        self.setState({ 
+                            mailSent: true,
+                            error: false,
+                            fields: {},
                         });
-                        this.setState({ error: false });
-                        this.resetForm();
-                    } else if (response.data.status === false) {
-                        console.log("Message failed to send.");
+                        self.fileValue.value="";
+                        self.selectedFile = null;
                     }
-                })
+                );
+            };
+            reader.onerror = function (error) {
+                alert(error);
+            };
+		}
+	}
 
-        }
-    };
-
-    resetForm() {
-        this.setState({
-            fields: {}
-        });
+    onChangeHandler(e){
+        this.selectedFile=e.target.files[0];
+        this.fileValue = e.target;
     }
 
     handleChange(field, e) {
@@ -124,7 +145,7 @@ class OnlineTranslation extends Component {
                             </ul>
                         </Card.Body>
                     </Card>
-                    <Form method="POST">
+                    <Form id="test">
                         <h4 className="form-title">{t('onlineTranslation.formTitle')}</h4>
                         <Form.Group as={Row} controlId="formHorizontalPassword">
                             <Form.Label column sm={3}>
@@ -170,17 +191,20 @@ class OnlineTranslation extends Component {
                                 {t('onlineTranslation.uploadFile')}
                             </Form.Label>
                             <Col sm={9}>
-                                <input type="file" name="myFile" />
+                                <input type="file" name="myFile" 
+                                    onChange={this.onChangeHandler.bind(this)}
+                                />
+                                 <span style={{ display:"block", color: "red" }}>{this.state.errors["file"]}</span>
                             </Col>
                         </Form.Group>
 
                         <Form.Group as={Row}>
                             <Col sm={{ span: 10, offset: 3 }}>
-                                <Button type="submit" onClick={e => this.handleFormSubmit(e)}>{t('onlineTranslation.submit')}</Button>
+                                <Button onClick={this.sendMail}>{t('onlineTranslation.submit')}</Button>
                             </Col>
                         </Form.Group>
                         <div>
-                            {this.state.mailSent && <div>{t('onlineTranslation.thankYou')}</div>}
+                            {this.state.mailSent && <div style={{ color: "#006935" }}>{t('onlineTranslation.thankYou')}</div>}
                         </div>
                     </Form>
                 </Container>

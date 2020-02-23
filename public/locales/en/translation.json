@@ -82,7 +82,7 @@
         "emailAddress": "Email Address",
         "message": "Message",
         "submit": "Submit",
-        "thankYou": "Thank you for contcting us."
+        "thankYou": "Thank you for contacting us."
     },
     "onlineVideo": {
         "mainTitle": "Online Video",
@@ -122,7 +122,7 @@
         "phoneNumber": "Phone Number",
         "uploadFile": "Driver license photocopy",
         "submit": "Submit",
-        "thankYou": "Thank you for contcting us."
+        "thankYou": "Sent successfully."
     },
     "courses": {
         "pageTitle": "Our Courses",
