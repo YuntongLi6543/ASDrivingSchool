@@ -27,8 +27,8 @@ class OnlineResources extends Component {
 							<Card className="">
 								<Card.Img className="card-image" variant="top" src={require(`../assets/img/pic3.jpg`)} />
 								<Card.Body>
-									<Card.Title className="pt-3 mt-0">Online Video</Card.Title>
-									<Link to="/online-video" className="btn btn-primary mt-2 mb-4">Watch Video</Link>
+									<Card.Title className="pt-3 mt-0">{t('onlineResource.onlineVideo')}</Card.Title>
+									<Link to="/online-video" className="btn btn-primary mt-2 mb-4">{t('onlineResource.watchVideo')}</Link>
 								</Card.Body>
 							</Card>
 						</Col>
@@ -37,8 +37,8 @@ class OnlineResources extends Component {
 							<Card>
 								<Card.Img className="card-image" variant="top" src={require(`../assets/img/pic4.jpg`)} />
 								<Card.Body>
-									<Card.Title className="pt-3 mt-0">Online Test</Card.Title>
-									<Link to="/online-test" className="btn btn-primary mt-2 mb-4">Go To Test</Link>
+									<Card.Title className="pt-3 mt-0">{t('onlineResource.onlineTest')}</Card.Title>
+									<Link to="/online-test" className="btn btn-primary mt-2 mb-4">{t('onlineResource.goToTest')}</Link>
 								</Card.Body>
 							</Card>
 						</Col>

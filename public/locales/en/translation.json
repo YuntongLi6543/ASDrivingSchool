@@ -63,7 +63,7 @@
         }
     },
     "footer": {
-        "headOfficer": "Head Officer",
+        "headOffice": "Head Office",
         "address": "4438 Sheppard Ave. E , unit 319, Toronto Ontario M1S 1V2",
         "tel": "Tel: 647-760-9358/ 647-519-9286",
         "email": "Email: journey9285@yahoo.com",
@@ -203,7 +203,10 @@
     "onlineResource": {
         "pageTitle": "Online Resource",
         "questionTitle": "Trivia Questionaire",
-        "onlineTest": "Online Test"
+        "onlineVideo": "Online Video",
+        "watchVideo": "Watch Video",
+        "onlineTest": "OnlineTest",
+        "goToTest": "Go To Test"
     },
     "schoolUpdate": {
         "pageTitle": "School Blog",
