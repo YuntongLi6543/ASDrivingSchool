@@ -204,7 +204,10 @@
   "onlineResource": {
     "pageTitle": "在线资源",
     "questionTitle": "加拿大安省|G1笔试 | 最新最全|中文笔试题库",
-    "onlineTest": "在线测试"
+    "onlineVideo": "在线视频",
+    "watchVideo": "去看看",
+    "onlineTest": "在线测试",
+    "goToTest": "去测试"
   },
   "schoolUpdate": {
     "pageTitle": "学校博客",

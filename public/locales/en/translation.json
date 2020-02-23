@@ -203,7 +203,10 @@
     "onlineResource": {
         "pageTitle": "Online Resource",
         "questionTitle": "Trivia Questionaire",
-        "onlineTest": "Online Test"
+        "onlineVideo": "Online Video",
+        "watchVideo": "Watch Video",
+        "onlineTest": "OnlineTest",
+        "goToTest": "Go To Test"
     },
     "schoolUpdate": {
         "pageTitle": "School Blog",

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import { englishTest, chineseTest } from '../assets/data/TestData';
 
+import {
+    Button
+} from "reactstrap";
+
 import '../scss/Courses.scss';
 
 import { withTranslation } from 'react-i18next';
@@ -45,18 +49,39 @@ class OnlineTest extends Component {
 
     checkAnswer = (selectedAnswer, correctAnswer) => {
         if (selectedAnswer === correctAnswer) {
-            this.setState({ message: 'Corrent!' })
+            this.setState({
+                englishMessage: 'Corrent!',
+                chineseMessage: '正确'
+            })
         } else {
-            this.setState({ message: 'Wrong!' })
+            this.setState({
+                englishMessage: 'Wrong!',
+                chineseMessage: '错误!'
+            })
         }
         this.setState({ display: true })
     }
 
-    nextQuestion = () => {
+    nextSignsQuestion = () => {
         this.setState({
             roadSignsTestIndex: this.state.roadSignsTestIndex + 1,
             display: 'none',
             message: ''
+        })
+    }
+
+    nextRulesQuestion = () => {
+        this.setState({
+            roadRulesTestIndex: this.state.roadRulesTestIndex + 1,
+            display: 'none',
+            message: ''
+        })
+    }
+
+    restartTest = () => {
+        this.setState({
+            roadSignsTestIndex: 0,
+            roadRulesTestIndex: 0,
         })
     }
 
@@ -66,75 +91,100 @@ class OnlineTest extends Component {
         let lang = this.props.i18n.language;
 
         let roadSignsRandomTest = this.state.roadSignsTest;
-        let roadSignsTest;
-        let roadRulesTest;
+        let roadRulesRandomTest = this.state.roadRulesTest;
 
-        console.log(this.state.roadSignTestIndex, roadSignsRandomTest.length)
+        let onlineTest;
 
         if (lang === 'en') {
-            if (roadSignsRandomTest[this.state.roadSignTestIndex] !== undefined) {
-                if (this.state.roadSignTestIndex < roadSignsRandomTest.length - 1) {
-                    roadSignsTest =
+            if (roadSignsRandomTest[this.state.roadSignsTestIndex] !== undefined) {
+                if (this.state.roadSignsTestIndex <= roadSignsRandomTest.length - 1) {
+                    onlineTest =
                         <div>
-                            <img src={require(`../assets/img/test/englishTestImg/${englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].question}`)} className="second-card-img" alt="..." />
-                            <button onClick={() => this.checkAnswer('A', englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].answer)}>A</button>
-                            <button onClick={() => this.checkAnswer('B', englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].answer)}>B</button>
-                            <button onClick={() => this.checkAnswer('C', englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].answer)}>C</button>
-                            <button onClick={() => this.checkAnswer('D', englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].answer)}>D</button>
-                            <div style={{ display: this.state.display }}>{this.state.message} Corrent Answer: {englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].answer}</div>
-                            <button style={{ display: this.state.nextQuestionButtonDisplay }} onClick={() => this.nextQuestion()}>Next Question</button>
+                            <img src={require(`../assets/img/test/englishTestImg/${englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].question}`)} className="second-card-img" alt="..." />
+                            <button onClick={() => this.checkAnswer('A', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>A</button>
+                            <button onClick={() => this.checkAnswer('B', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>B</button>
+                            <button onClick={() => this.checkAnswer('C', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>C</button>
+                            <button onClick={() => this.checkAnswer('D', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>D</button>
+                            <div style={{ display: this.state.display }}>{this.state.englishMessage} Corrent Answer: {englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer}</div>
+                            <button style={{ display: this.state.nextSignsQuestionButtonDisplay }} onClick={() => this.nextSignsQuestion()}>Next Question</button>
                         </div>
                 }
             }
 
-            if (roadSignsRandomTest[this.state.roadSignTestIndex] !== undefined) {
-                if (this.state.roadSignTestIndex > roadSignsRandomTest.length - 1) {
-                    roadSignsTest =
-                        <div>
-                            <img src={require(`../assets/img/test/englishTestImg/${englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].question}`)} className="second-card-img" alt="..." />
-                            <button onClick={() => this.checkAnswer('A', englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].answer)}>A</button>
-                            <button onClick={() => this.checkAnswer('B', englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].answer)}>B</button>
-                            <button onClick={() => this.checkAnswer('C', englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].answer)}>C</button>
-                            <button onClick={() => this.checkAnswer('D', englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].answer)}>D</button>
-                            <div style={{ display: this.state.display }}>{this.state.message} Corrent Answer: {englishTest[roadSignsRandomTest[this.state.roadSignTestIndex]].answer}</div>
-                            <button style={{ display: this.state.nextQuestionButtonDisplay }} onClick={() => this.nextQuestion()}>Next Question</button>
-                        </div>
-                }
-            }
-
-
-
-
-            // let roadSignTest = this.state.roadSignTest.map((item, index) =>
-            //     <div>
-            //         <div>
-            //             <img src={require(`../assets/img/test/englishTestImg/${englishTest[index].question}`)} className="second-card-img" alt="..." />
-            //             <button onClick={() => this.checkAnswer('A', englishTest[index].answer)}>A</button>
-            //             <button onClick={() => this.checkAnswer('B', englishTest[index].answer)}>B</button>
-            //             <button onClick={() => this.checkAnswer('C', englishTest[index].answer)}>C</button>
-            //             <button onClick={() => this.checkAnswer('D', englishTest[index].answer)}>D</button>
-            //             <div style={{display: this.state.display}}>正确答案：{englishTest[index].answer}</div>
-            //             <button>下一题</button>
-            //         </div>
-            //     </div>
-            // );
-            return (
-                <div>
-                    <h2 className="page-title">{t('onlineResource.onlineTest')}</h2>
-                    {roadSignsTest}
-                </div>
-            )
-        } else {
-            return (
-                <div>
-                    <h2 className="page-title">{t('onlineResource.onlineTest')}</h2>
+            if (roadSignsRandomTest[this.state.roadSignsTestIndex] === undefined
+                && roadRulesRandomTest[this.state.roadRulesTestIndex] !== undefined) {
+                onlineTest =
                     <div>
-                        <img src={require(`../assets/img/test/chineseTestImg/${chineseTest[0].question}`)} className="second-card-img" alt="..." />
-                        <text>{chineseTest[0].answer}</text>
+                        <img src={require(`../assets/img/test/englishTestImg/${englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].question}`)} className="second-card-img" alt="..." />
+                        <button onClick={() => this.checkAnswer('A', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>A</button>
+                        <button onClick={() => this.checkAnswer('B', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>B</button>
+                        <button onClick={() => this.checkAnswer('C', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>C</button>
+                        <button onClick={() => this.checkAnswer('D', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>D</button>
+                        <div style={{ display: this.state.display }}>{this.state.englishMessage} Corrent Answer: {englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer}</div>
+                        <button style={{ display: this.state.nextRulesQuestionButtonDisplay }} onClick={() => this.nextRulesQuestion()}>Next Question</button>
                     </div>
-                </div>
-            )
+            }
+
+            if (roadSignsRandomTest[this.state.roadSignsTestIndex] === undefined
+                && roadRulesRandomTest[this.state.roadRulesTestIndex] === undefined) {
+                onlineTest =
+                    <Button
+                        className="mt-4 our-server-btn"
+                        color="primary"
+                        onClick={this.restartTest}
+                    >
+                        Restart Test
+                    </Button>
+            }
+        } else {
+            if (roadSignsRandomTest[this.state.roadSignsTestIndex] !== undefined) {
+                if (this.state.roadSignsTestIndex <= roadSignsRandomTest.length - 1) {
+                    onlineTest =
+                        <div>
+                            <img src={require(`../assets/img/test/chineseTestImg/${chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].question}`)} className="second-card-img" alt="..." />
+                            <button onClick={() => this.checkAnswer('A', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>A</button>
+                            <button onClick={() => this.checkAnswer('B', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>B</button>
+                            <button onClick={() => this.checkAnswer('C', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>C</button>
+                            <button onClick={() => this.checkAnswer('D', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>D</button>
+                            <div style={{ display: this.state.display }}>{this.state.chineseMessage} 正确答案: {chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer}</div>
+                            <button style={{ display: this.state.nextSignsQuestionButtonDisplay }} onClick={() => this.nextSignsQuestion()}>下一题</button>
+                        </div>
+                }
+            }
+
+            if (roadSignsRandomTest[this.state.roadSignsTestIndex] === undefined
+                && roadRulesRandomTest[this.state.roadRulesTestIndex] !== undefined) {
+                onlineTest =
+                    <div>
+                        <img src={require(`../assets/img/test/chineseTestImg/${chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].question}`)} className="second-card-img" alt="..." />
+                        <button onClick={() => this.checkAnswer('A', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>A</button>
+                        <button onClick={() => this.checkAnswer('B', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>B</button>
+                        <button onClick={() => this.checkAnswer('C', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>C</button>
+                        <button onClick={() => this.checkAnswer('D', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>D</button>
+                        <div style={{ display: this.state.display }}>{this.state.chineseMessage} 正确答案: {chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer}</div>
+                        <button style={{ display: this.state.nextRulesQuestionButtonDisplay }} onClick={() => this.nextRulesQuestion()}>下一题</button>
+                    </div>
+            }
+
+            if (roadSignsRandomTest[this.state.roadSignsTestIndex] === undefined
+                && roadRulesRandomTest[this.state.roadRulesTestIndex] === undefined) {
+                onlineTest =
+                    <Button
+                        className="mt-4 our-server-btn"
+                        color="primary"
+                        onClick={this.restartTest}
+                    >
+                        重新开始
+                    </Button>
+            }
         }
+
+        return (
+            <div>
+                <h2 className="page-title">{t('onlineResource.onlineTest')}</h2>
+                {onlineTest}
+            </div>
+        )
     }
 }
 
