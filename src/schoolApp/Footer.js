@@ -25,7 +25,7 @@ class Footer extends Component {
 					<div className="container text-center text-md-left">
 						<div className="row">
 					      	<div className="col-md-5 mt-md-0 mt-3 pl-0">
-					        	<h5 className="text-uppercase">{t('footer.headOfficer')}</h5>
+					        	<h5 className="text-uppercase">{t('footer.headOffice')}</h5>
 					        	<p>{t('footer.address')}
 					        	<br></br> 
 					        	{t('footer.tel')}
