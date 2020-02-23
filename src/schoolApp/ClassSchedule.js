@@ -103,7 +103,6 @@ class classSchedule extends Component {
                                         <li className="list-group-item">{t('classSchedule.day4Part1Text4')}</li>
                                         <li className="list-group-item">{t('classSchedule.day4Part1Text5')}</li>
                                         <li className="list-group-item">{t('classSchedule.day4Part1Text6')}</li>
-                                        <li className="list-group-item">{t('classSchedule.day4Part1Text7')}</li>
                                     </ul>
                                     <p id="intro1">{t('classSchedule.day4Part2Text')}</p>
                                     <ul className="list-group list-group-flush">
