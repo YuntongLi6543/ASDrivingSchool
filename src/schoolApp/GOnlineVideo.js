@@ -5,13 +5,21 @@ import Col from 'react-bootstrap/Col';
 import Iframe from 'react-iframe';
 import '../scss/G2OnlineVideo.scss';
 
+import { withTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
-export default class GOnlineVideo extends Component{
+class GOnlineVideo extends Component{
+    handleClick(lang) {
+		i18next.changeLanguage(lang);
+	}
+
     render(){
+        const { t } = this.props;
+
         return(
             <div>
                 <Container className = "main-content">
-                    <h1 className = "main-title">G2 Online Video</h1>
+                    <h2 className = "main-title">{t('gOnlineVideo.mainTitle')}</h2>
                     <Row>
                         <Col md = "6">
                             <div id = "video-01">
@@ -20,6 +28,7 @@ export default class GOnlineVideo extends Component{
                             width = "100%"
                             height = "480px"
                             position = "relative"></Iframe>
+                            <h4>{t('gOnlineVideo.gOnlineVideo1')}</h4>
                             </div>
                         </Col>
                         <Col md = "6">
@@ -29,6 +38,7 @@ export default class GOnlineVideo extends Component{
                             width = "100%"
                             height = "480px"
                             position = "relative"></Iframe>
+                            <h4>{t('gOnlineVideo.gOnlineVideo2')}</h4>
                             </div>
                         </Col>
                     </Row>
@@ -40,6 +50,7 @@ export default class GOnlineVideo extends Component{
                             width = "100%"
                             height = "480px"
                             position = "relative"></Iframe>
+                            <h4>{t('gOnlineVideo.gOnlineVideo3')}</h4>
                             </div>
                         </Col>
                         <Col md = "6">
@@ -49,6 +60,7 @@ export default class GOnlineVideo extends Component{
                             width = "100%"
                             height = "480px"
                             position = "relative"></Iframe>
+                            <h4>{t('gOnlineVideo.gOnlineVideo4')}</h4>
                             </div>
                         </Col>
                     </Row>
@@ -60,3 +72,5 @@ export default class GOnlineVideo extends Component{
         );
     }
 }
+
+export default withTranslation()(GOnlineVideo);

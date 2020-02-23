@@ -85,6 +85,30 @@
     "submit": "确认提交",
     "thankYou": "谢谢您联系我们"
   },
+  "onlineVideo": {
+    "mainTitle": "在线视频",
+    "g2OnlineVideo": "G2 在线视频教程",
+    "gOnlineVideo": "G 在线视频教程",
+    "watchVideo": "观看视频"
+  },
+  "g2OnlineVideo": {
+    "mainTitle": "G2 在线视频",
+    "g2OnlineVideo1": "G2 视频1",
+    "g2OnlineVideo2": "G2 视频2",
+    "g2OnlineVideo3": "G2 视频3",
+    "g2OnlineVideo4": "G2 视频4",
+    "g2OnlineVideo5": "G2 视频5",
+    "g2OnlineVideo6": "G2 视频6",
+    "g2OnlineVideo7": "G2 视频7",
+    "g2OnlineVideo8": "G2 视频8"
+  },
+  "gOnlineVideo": {
+    "mainTitle": "G 在线视频",
+    "gOnlineVideo1": "G 视频1",
+    "gOnlineVideo2": "G 视频2",
+    "gOnlineVideo3": "G 视频3",
+    "gOnlineVideo4": "G 视频4"
+  },
   "onlineTranslation": {
     "pageTitle": "中国驾照翻译认证",
     "onlineTranslationContactForm": "联系我们",
@@ -167,12 +191,11 @@
     "day4": "DAY 4",
     "day4Part1Text": "恶略天气下的驾驶",
     "day4Part1Text1": "夜间驾驶",
-    "day4Part1Text2": "刺眼眩光",
-    "day4Part1Text3": "雾中驾驶",
-    "day4Part1Text4": "雨中驾驶",
-    "day4Part1Text5": "雪天驾驶",
-    "day4Part1Text6": "冰上驾驶",
-    "day4Part1Text7": "强风",
+    "day4Part1Text2": "雾中驾驶",
+    "day4Part1Text3": "雨中驾驶",
+    "day4Part1Text4": "雪天驾驶",
+    "day4Part1Text5": "冰上驾驶",
+    "day4Part1Text6": "强风",
     "day4Part2Text": "路考，车辆保养及保险",
     "day4Part2Text1": "路试G2/G",
     "day4Part2Text2": "车辆保养",

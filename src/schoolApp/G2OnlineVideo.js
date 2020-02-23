@@ -5,13 +5,21 @@ import Col from 'react-bootstrap/Col';
 import Iframe from 'react-iframe';
 import '../scss/G2OnlineVideo.scss';
 
+import { withTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
-export default class G2OnlineVideo extends Component {
+class G2OnlineVideo extends Component {
+
+    handleClick(lang) {
+		i18next.changeLanguage(lang);
+	}
+
     render() {
+        const { t } = this.props;
         return (
             <div>
                 <Container className="main-content">
-                    <h1 className="main-title">G2 Online Video</h1>
+                    <h2 className="main-title">{t('g2OnlineVideo.mainTitle')}</h2>
                     <Row>
                         <Col md="12">
                             <div id="video-01">
@@ -19,7 +27,9 @@ export default class G2OnlineVideo extends Component {
                                     id="video-01"
                                     width="100%"
                                     height='600px'
-                                    position="relative"></Iframe>
+                                    position="relative">
+                                    </Iframe>
+                                    <h4>{t('g2OnlineVideo.g2OnlineVideo1')}</h4>
                             </div>
                         </Col>
                         <Col md="12">
@@ -30,6 +40,7 @@ export default class G2OnlineVideo extends Component {
                                     height='600px'
                                     position="relative"></Iframe>
                             </div>
+                            <h4>{t('g2OnlineVideo.g2OnlineVideo2')}</h4>
                         </Col>
                         <Col md="12">
                             <div id="video-03">
@@ -38,6 +49,7 @@ export default class G2OnlineVideo extends Component {
                                     width="100%"
                                     height='600px'
                                     position="relative"></Iframe>
+                                    <h4>{t('g2OnlineVideo.g2OnlineVideo3')}</h4>
                             </div>
                         </Col>
                         <Col md="12">
@@ -47,6 +59,7 @@ export default class G2OnlineVideo extends Component {
                                     width="100%"
                                     height='600px'
                                     position="relative"></Iframe>
+                                    <h4>{t('g2OnlineVideo.g2OnlineVideo4')}</h4>
                             </div>
                         </Col>
                         <Col md="12">
@@ -56,6 +69,7 @@ export default class G2OnlineVideo extends Component {
                                     width="100%"
                                     height='600px'
                                     position="relative"></Iframe>
+                                    <h4>{t('g2OnlineVideo.g2OnlineVideo5')}</h4>
                             </div>
                         </Col>
                         <Col md="12">
@@ -65,6 +79,7 @@ export default class G2OnlineVideo extends Component {
                                     width="100%"
                                     height='600px'
                                     position="relative"></Iframe>
+                                    <h4>{t('g2OnlineVideo.g2OnlineVideo6')}</h4>
                             </div>
                         </Col>
                         <Col md="12">
@@ -74,6 +89,7 @@ export default class G2OnlineVideo extends Component {
                                     width="100%"
                                     height='600px'
                                     position="relative"></Iframe>
+                                    <h4>{t('g2OnlineVideo.g2OnlineVideo7')}</h4>
                             </div>
                         </Col>
                         <Col md="12">
@@ -83,6 +99,7 @@ export default class G2OnlineVideo extends Component {
                                     width="100%"
                                     height='600px'
                                     position="relative"></Iframe>
+                                    <h4>{t('g2OnlineVideo.g2OnlineVideo8')}</h4>
                             </div>
                         </Col>
                     </Row>
@@ -93,3 +110,5 @@ export default class G2OnlineVideo extends Component {
         );
     }
 }
+
+export default withTranslation()(G2OnlineVideo);
