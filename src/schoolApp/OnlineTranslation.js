@@ -200,7 +200,7 @@ class OnlineTranslation extends Component {
 
                         <Form.Group as={Row}>
                             <Col sm={{ span: 10, offset: 3 }}>
-                                <Button onClick={this.sendMail}>{t('onlineTranslation.submit')}</Button>
+                                <Button onClick={this.sendMail}  style={{ backgroundColor: "#006935", border:"none" }}>{t('onlineTranslation.submit')}</Button>
                             </Col>
                         </Form.Group>
                         <div>

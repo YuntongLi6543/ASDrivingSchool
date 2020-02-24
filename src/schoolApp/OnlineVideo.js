@@ -26,7 +26,7 @@ class OnlineVideo extends Component {
                                 <Card.Img className="card-image" variant="top" src={require(`../assets/img/pic1.jpg`)} />
                                 <Card.Body>
                                     <Card.Title className="pt-3 mt-0">{t('onlineVideo.g2OnlineVideo')}</Card.Title>
-                                    <Link to="/G2-online-video" className="btn btn-primary mt-2 mb-4">{t('onlineVideo.watchVideo')}</Link>
+                                    <Link to="/G2-online-video" className="btn btn-primary mt-2 mb-4" style={{ backgroundColor: "#006935", border:"none" }}>{t('onlineVideo.watchVideo')}</Link>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -36,7 +36,7 @@ class OnlineVideo extends Component {
                                 <Card.Img className="card-image" variant="top" src={require(`../assets/img/pic2.jpg`)} />
                                 <Card.Body>
                                     <Card.Title className="pt-3 mt-0">{t('onlineVideo.gOnlineVideo')}</Card.Title>
-                                    <Link to="/G-online-video" className="btn btn-primary mt-2 mb-4">{t('onlineVideo.watchVideo')}</Link>
+                                    <Link to="/G-online-video" className="btn btn-primary mt-2 mb-4" style={{ backgroundColor: "#006935", border:"none" }}>{t('onlineVideo.watchVideo')}</Link>
                                 </Card.Body>
                             </Card>
                         </Col>

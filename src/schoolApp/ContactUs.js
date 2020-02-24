@@ -141,7 +141,7 @@ class ContactUs extends Component {
 
 						<Form.Group as={Row}>
 							<Col sm={{ span: 10, offset: 2 }}>
-								<Button onClick={this.sendMail}>{t('contactUs.submit')}</Button>
+								<Button onClick={this.sendMail} style={{ backgroundColor: "#006935", border:"none" }}>{t('contactUs.submit')}</Button>
 							</Col>
 						</Form.Group>
 

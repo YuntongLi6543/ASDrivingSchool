@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import { englishTest, chineseTest } from '../assets/data/TestData';
 
 import {
-    Button
+    Button,
+    Container
 } from "reactstrap";
 
-import '../scss/Courses.scss';
+import '../scss/OnlineTest.scss';
 
 import { withTranslation } from 'react-i18next';
 import i18next from 'i18next';
@@ -101,13 +102,18 @@ class OnlineTest extends Component {
                     onlineTest =
                         <div>
                             <img src={require(`../assets/img/test/englishTestImg/${englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].question}`)} className="second-card-img" alt="..." />
-                            {/* annie (4个选项，一个文字正确答案，一个下一题按钮，样式，居中 主题绿色) */}
-                            <button onClick={() => this.checkAnswer('A', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>A</button>
-                            <button onClick={() => this.checkAnswer('B', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>B</button>
-                            <button onClick={() => this.checkAnswer('C', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>C</button>
-                            <button onClick={() => this.checkAnswer('D', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>D</button>
-                            <div style={{ display: this.state.display }}>{this.state.englishMessage} Corrent Answer: {englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer}</div>
-                            <button style={{ display: this.state.nextSignsQuestionButtonDisplay }} onClick={() => this.nextSignsQuestion()}>Next Question</button>
+                            <div className="select-part">
+                                <div className="btn-part">
+                                    <button className="select-btn" onClick={() => this.checkAnswer('A', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>A</button>
+                                    <button className="select-btn" onClick={() => this.checkAnswer('B', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>B</button>
+                                    <button className="select-btn" onClick={() => this.checkAnswer('C', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>C</button>
+                                    <button className="select-btn" onClick={() => this.checkAnswer('D', englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>D</button>
+                                    <div className="answer-part" style={{ display: this.state.display }}>{this.state.englishMessage} Corrent Answer: {englishTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer}</div>
+                                </div>
+                                <div className="next-part">
+                                    <button className="next-btn" style={{ display: this.state.nextSignsQuestionButtonDisplay }} onClick={() => this.nextSignsQuestion()}>Next Question</button>
+                                </div>
+                            </div>
                         </div>
                 }
             }
@@ -117,20 +123,24 @@ class OnlineTest extends Component {
                 onlineTest =
                     <div>
                         <img src={require(`../assets/img/test/englishTestImg/${englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].question}`)} className="second-card-img" alt="..." />
-                        {/* annie (4个选项，一个文字正确答案，一个下一题按钮，样式，居中 主题绿色) */}
-                        <button onClick={() => this.checkAnswer('A', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>A</button>
-                        <button onClick={() => this.checkAnswer('B', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>B</button>
-                        <button onClick={() => this.checkAnswer('C', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>C</button>
-                        <button onClick={() => this.checkAnswer('D', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>D</button>
-                        <div style={{ display: this.state.display }}>{this.state.englishMessage} Corrent Answer: {englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer}</div>
-                        <button style={{ display: this.state.nextRulesQuestionButtonDisplay }} onClick={() => this.nextRulesQuestion()}>Next Question</button>
+                        <div className="select-part">
+                            <div className="btn-part">
+                                <button className="select-btn" onClick={() => this.checkAnswer('A', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>A</button>
+                                <button className="select-btn" onClick={() => this.checkAnswer('B', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>B</button>
+                                <button className="select-btn" onClick={() => this.checkAnswer('C', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>C</button>
+                                <button className="select-btn" onClick={() => this.checkAnswer('D', englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>D</button>
+                                <div className="answer-part" style={{ display: this.state.display }}>{this.state.englishMessage} Corrent Answer: {englishTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer}</div>
+                            </div>
+                            <div className="next-part">
+                                <button className="next-btn select-btn" style={{ display: this.state.nextRulesQuestionButtonDisplay }} onClick={() => this.nextRulesQuestion()}>Next Question</button>
+                            </div>
+                        </div>
                     </div>
             }
 
             if (roadSignsRandomTest[this.state.roadSignsTestIndex] === undefined
                 && roadRulesRandomTest[this.state.roadRulesTestIndex] === undefined) {
                 onlineTest =
-                    //annie (button 样式，居中 主题绿色)
                     <Button
                         className="mt-4 our-server-btn"
                         color="primary"
@@ -144,14 +154,19 @@ class OnlineTest extends Component {
                 if (this.state.roadSignsTestIndex <= roadSignsRandomTest.length - 1) {
                     onlineTest =
                         <div>
-                            <img src={require(`../assets/img/test/chineseTestImg/${chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].question}`)} className="second-card-img" alt="..." />
-                            {/* annie (4个选项，一个文字正确答案，一个下一题按钮，样式，居中 主题绿色) */}
-                            <button onClick={() => this.checkAnswer('A', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>A</button>
-                            <button onClick={() => this.checkAnswer('B', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>B</button>
-                            <button onClick={() => this.checkAnswer('C', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>C</button>
-                            <button onClick={() => this.checkAnswer('D', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>D</button>
-                            <div style={{ display: this.state.display }}>{this.state.chineseMessage} 正确答案: {chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer}</div>
-                            <button style={{ display: this.state.nextSignsQuestionButtonDisplay }} onClick={() => this.nextSignsQuestion()}>下一题</button>
+                            <img src={require(`../assets/img/test/chineseTestImg/${chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].question}`)} className="second-card-img" alt="..." />    
+                            <div className="select-part">
+                                <div className="btn-part">
+                                    <button className="select-btn" onClick={() => this.checkAnswer('A', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>A</button>
+                                    <button className="select-btn" onClick={() => this.checkAnswer('B', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>B</button>
+                                    <button className="select-btn" onClick={() => this.checkAnswer('C', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>C</button>
+                                    <button className="select-btn" onClick={() => this.checkAnswer('D', chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer)}>D</button>
+                                    <div className="answer-part" style={{ display: this.state.display }}>{this.state.chineseMessage} 正确答案: {chineseTest[roadSignsRandomTest[this.state.roadSignsTestIndex]].answer}</div>
+                                </div>
+                                <div className="next-part">
+                                    <button className="next-btn select-btn" style={{ display: this.state.nextSignsQuestionButtonDisplay }} onClick={() => this.nextSignsQuestion()}>下一题</button>
+                                </div>
+                            </div>
                         </div>
                 }
             }
@@ -161,20 +176,24 @@ class OnlineTest extends Component {
                 onlineTest =
                     <div>
                         <img src={require(`../assets/img/test/chineseTestImg/${chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].question}`)} className="second-card-img" alt="..." />
-                        {/* annie (4个选项，一个文字正确答案，一个下一题按钮，样式，居中 主题绿色) */}
-                        <button onClick={() => this.checkAnswer('A', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>A</button>
-                        <button onClick={() => this.checkAnswer('B', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>B</button>
-                        <button onClick={() => this.checkAnswer('C', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>C</button>
-                        <button onClick={() => this.checkAnswer('D', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>D</button>
-                        <div style={{ display: this.state.display }}>{this.state.chineseMessage} 正确答案: {chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer}</div>
-                        <button style={{ display: this.state.nextRulesQuestionButtonDisplay }} onClick={() => this.nextRulesQuestion()}>下一题</button>
+                        <div className="select-part">
+                            <div className="btn-part">
+                                <button className="select-btn" onClick={() => this.checkAnswer('A', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>A</button>
+                                <button className="select-btn" onClick={() => this.checkAnswer('B', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>B</button>
+                                <button className="select-btn" onClick={() => this.checkAnswer('C', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>C</button>
+                                <button className="select-btn" onClick={() => this.checkAnswer('D', chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer)}>D</button>
+                                <div className="answer-part" style={{ display: this.state.display }}>{this.state.chineseMessage} 正确答案: {chineseTest[roadRulesRandomTest[this.state.roadRulesTestIndex] + 75].answer}</div>
+                            </div>
+                            <div className="next-part">
+                                <button className="next-btn select-btn" style={{ display: this.state.nextRulesQuestionButtonDisplay }} onClick={() => this.nextRulesQuestion()}>下一题</button>
+                            </div>
+                        </div>
                     </div>
             }
 
             if (roadSignsRandomTest[this.state.roadSignsTestIndex] === undefined
                 && roadRulesRandomTest[this.state.roadRulesTestIndex] === undefined) {
                 onlineTest =
-                    //annie (button 样式，居中 主题绿色，同中文样式)
                     <Button
                         className="mt-4 our-server-btn"
                         color="primary"
@@ -187,8 +206,10 @@ class OnlineTest extends Component {
 
         return (
             <div>
-                <h2 className="page-title">{t('onlineResource.onlineTest')}</h2>
-                {onlineTest}
+                <Container>
+                    <h2 className="page-title">{t('onlineResource.onlineTest')}</h2>
+                    {onlineTest}
+                </Container>
             </div>
         )
     }
