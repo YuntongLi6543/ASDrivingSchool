@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 
@@ -34,31 +34,31 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <ScrollIntoView>
           <TopBar />
           <ScrollToTopButton />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/home" component={Home} />
-          <Route path="/about-us" component={AboutUs} />
-          <Route path="/contact-us" component={ContactUs} />
-          <Route path="/courses" component={Courses} />
-          <Route path="/online-translation" component={OnlineTranslation} />
-          <Route path="/online-resources" component={OnlineResources} />
-          <Route path="/G-online-video" component={GOnlineVideo} />
-          <Route path="/G2-online-video" component={G2OnlineVideo} />
-          <Route path="/online-video" component={OnlineVideo} />
-          <Route path="/online-test" component={OnlineTest} />
-          <Route path="/class-schedule" component={ClassSchedule} />
-          <Route path="/school-update" component={SchoolUpdate} />
-          <Redirect from="/*" to="/" />
-        </Switch>
-        <div>
-          <Footer />
-        </div>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/home" component={Home} />
+            <Route path="/about-us" component={AboutUs} />
+            <Route path="/contact-us" component={ContactUs} />
+            <Route path="/courses" component={Courses} />
+            <Route path="/online-translation" component={OnlineTranslation} />
+            <Route path="/online-resources" component={OnlineResources} />
+            <Route path="/G-online-video" component={GOnlineVideo} />
+            <Route path="/G2-online-video" component={G2OnlineVideo} />
+            <Route path="/online-video" component={OnlineVideo} />
+            <Route path="/online-test" component={OnlineTest} />
+            <Route path="/class-schedule" component={ClassSchedule} />
+            <Route path="/school-update" component={SchoolUpdate} />
+            <Redirect from="/*" to="/" />
+          </Switch>
+          <div>
+            <Footer />
+          </div>
         </ScrollIntoView>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }

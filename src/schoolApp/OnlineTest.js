@@ -52,7 +52,7 @@ class OnlineTest extends Component {
         if (selectedAnswer === correctAnswer) {
             this.setState({
                 englishMessage: 'Corrent!',
-                chineseMessage: '正确'
+                chineseMessage: '正确!'
             })
         } else {
             this.setState({
