@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { englishTest, chineseTest } from '../assets/data/TestData';
+import { englishTest, chineseTest } from './TestData';
 
 import {
     Button,
