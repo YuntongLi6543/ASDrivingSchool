@@ -37,6 +37,10 @@
         "card3Phone": "Tel：6475199286",
         "card3Button": "More Detail"
     },
+    "homePageDivider": {
+        "message": "Are You Looking For A Driving School In Canada?",
+        "button": "Contact Us"
+    },
     "aboutUs": {
         "aboutASDrivingSchool": "About AS Driving School",
         "aboutASDrivingSchoolContent": {

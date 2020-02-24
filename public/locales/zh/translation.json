@@ -38,6 +38,10 @@
     "card3Phone": "电话：6475199286",
     "card3Button": "更多详情"
   },
+  "homePageDivider": {
+    "message": "寻找加拿大本地的驾驶学校吗?",
+    "button": "联系我们"
+},
   "aboutUs": {
     "aboutASDrivingSchool": "关于五洲驾校",
     "aboutASDrivingSchoolContent": {
@@ -140,7 +144,7 @@
   },
   "classSchedule": {
     "pageTitle": "理论课安排",
-    "day1": "DAY 1",
+    "day1": "第一天",
     "day1Part1Text": "驾驶态度/ 驾照及扣分系统",
     "day1Part1Text1": "驾驶态度",
     "day1Part1Text2": "驾照系列",
@@ -155,7 +159,7 @@
     "day1Part2Text3": "驾驶前的准备",
     "day1Part2Text4": "交通标志及灯号及路面标记",
     "day1Part2Text5": "道路优先权",
-    "day2": "DAY 2",
+    "day2": "第二天",
     "day2Part1Text": "车的基本操作和防御性驾驶",
     "day2Part1Text1": "汽车的控制和操作",
     "day2Part1Text2": "启动",
@@ -176,7 +180,7 @@
     "day2Part2Text7": "进入高速",
     "day2Part2Text8": "在高速上驾驶",
     "day2Part2Text9": "出高速",
-    "day3": "DAY 3",
+    "day3": "第三天",
     "day3Part1Text": "交通意外及事故处理",
     "day3Part1Text1": "在车祸中有人受伤",
     "day3Part1Text2": "在车祸中无人受伤",
@@ -188,7 +192,7 @@
     "day3Part2Text4": "怎样避免分心驾驶",
     "day3Part2Text5": "影响驾驶",
     "day3Part2Text6": "影响驾驶的后果",
-    "day4": "DAY 4",
+    "day4": "第四天",
     "day4Part1Text": "恶略天气下的驾驶",
     "day4Part1Text1": "夜间驾驶",
     "day4Part1Text2": "雾中驾驶",
@@ -211,11 +215,11 @@
   },
   "schoolUpdate": {
     "pageTitle": "学校博客",
-    "blog1Title": "Earundem vigiliam eligendo",
-    "blog1Text": "Earundem vigiliam eligendo in ei pluribus concipio. Expectabam etc meo qui videbuntur quascunque propositio explicetur. Per qui aër iii meos uti idem. Ii gi credimus connivet bonitati. Ei magna mo an satis capax menti majus. Cognita humanam ii caloris testari in. Ii usitate si communi figuras. Co articulo ex attentum in indiciis referrem. ",
-    "blog2Title": "Earundem vigiliam eligendo",
-    "blog2Text": "Earundem vigiliam eligendo in ei pluribus concipio. Expectabam etc meo qui videbuntur quascunque propositio explicetur. Per qui aër iii meos uti idem. Ii gi credimus connivet bonitati. Ei magna mo an satis capax menti majus. Cognita humanam ii caloris testari in. Ii usitate si communi figuras. Co articulo ex attentum in indiciis referrem. ",
-    "blog3Title": "Earundem vigiliam eligendo",
-    "blog3Text": "Earundem vigiliam eligendo in ei pluribus concipio. Expectabam etc meo qui videbuntur quascunque propositio explicetur. Per qui aër iii meos uti idem. Ii gi credimus connivet bonitati. Ei magna mo an satis capax menti majus. Cognita humanam ii caloris testari in. Ii usitate si communi figuras. Co articulo ex attentum in indiciis referrem. "
+    "blog1Title": "",
+    "blog1Text": "",
+    "blog2Title": "",
+    "blog2Text": "",
+    "blog3Title": "",
+    "blog3Text": ""
   }
 }

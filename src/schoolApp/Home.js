@@ -209,9 +209,8 @@ class Home extends Component {
 
 				<div className="contact-us">
 					<Container>
-						<p>ARE YOU LOOKING FOR A DRIVING SCHOOL IN CANADA?
-					</p>
-						<Link className="contact-btn btn btn-primary" to="/contact-us" role="button">Contact Us</Link>
+						<p>{t('homePageDivider.message')}</p>
+						<Link className="contact-btn btn btn-primary" to="/contact-us" role="button">{t('homePageDivider.button')}</Link>
 					</Container>
 				</div>
 

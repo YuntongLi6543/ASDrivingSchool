@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
-import{
+import {
     EmailShareButton,
     TwitterShareButton,
     WeiboShareButton,
@@ -33,7 +33,7 @@ class SchoolUpdate extends Component {
                 <Container>
                     <h2 className="page-title">{t('schoolUpdate.pageTitle')}</h2>
                     <div className="updateDetails">
-                        <div id="first">
+                        {/* <div id="first">
                             <Container>
                                 <Card>
                                     <Card.Body>
@@ -62,9 +62,9 @@ class SchoolUpdate extends Component {
                                     </Card.Body>
                                 </Card>
                             </Container>
-                        </div>
+                        </div> */}
                     </div>
-                    <div className = "shareBotton">
+                    <div className="shareBotton">
                         <EmailShareButton
                             url={shareUrl}
                             quote={title}
@@ -72,21 +72,21 @@ class SchoolUpdate extends Component {
                         >
                             <EmailIcon size={32} round />
                         </EmailShareButton>
-                        <TwitterShareButton 
+                        <TwitterShareButton
                             url={shareUrl}
                             quote={title}
                             className="Demo__some-network__share-button"
                         >
                             <TwitterIcon size={32} round />
-            
+
                         </TwitterShareButton>
-                        <WeiboShareButton 
+                        <WeiboShareButton
                             url={shareUrl}
                             quote={title}
                             className="Demo__some-network__share-button"
                         >
                             <WeiboIcon size={32} round />
-            
+
                         </WeiboShareButton>
                         <FacebookShareButton
                             url={shareUrl}
