@@ -16,22 +16,22 @@
 }
 .carousel-text-content{
     position: absolute;
-    top:47%;
+    top:43%;
 	display: block!important;
-	background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
     h1{
         color: #fff;
     }
 }
 
 .carousel-text{
-	background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
 }
 .carousel-inner{
     width: 100%;
     .CarsouelImg{
         filter:brightness(30%);
-        height: 600px!important;
+        height: 400px!important;
     }
 }
 .all-slide{
@@ -174,37 +174,22 @@
     max-height: 250px;
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px){
-    .carouselText{
-		background-color: rgba(0, 0, 0, 0);
-        top:48%;
-        h1{
-            font-size:1.6rem;
-
-        }
-        .carsouelBtn{
-            font-size: 1rem;
-            padding: 10px 20px;
-            margin-top: 15px;
-        }
+@media (min-width: 426px) and (max-width: 768px){
+    .carousel-text-content{
+        top:45%;
+    }
+    .carousel-text{
+        font-size:1.6rem;
     }
 }
 
-@media screen and (max-width: 425px){
-    .carouselText{
-		background-color: rgba(0, 0, 0, 0);
-        top:45%;
-        h1{
-            font-size:1rem;
-
-        }
-        .carsouelBtn{
-            font-size: .7rem;
-            padding: 8px 10px;
-            margin-top: 5px;
-        }
+@media (max-width: 425px){
+    .carousel-text-content{
+        top:46%;
     }
-
+    .carousel-text{
+        font-size:1rem;
+    }
     .renewer-item{
         margin-bottom: 0!important;
     }
