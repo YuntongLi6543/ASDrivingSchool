@@ -133,7 +133,21 @@ class Home extends Component {
 					</div>
 				</section>
 
-				<section className="section section-lg pt-lg-0">
+				<section className="mt-5 section section-lg pt-lg-0">
+					<Container className="justify-content-center text-center">
+						<h2 className="mb-5">{t('homePageAboutUs.title')}</h2>
+
+						<div className="textbox">
+							<p className="aboutUs-text mt-2 mb-5">
+								{t('homePageAboutUs.text')}
+							</p>
+						</div>
+
+
+					</Container>
+				</section>
+
+				<section className="section section-lg pt-lg-0 mt-5">
 					<Container>
 						<Row className="justify-content-center text-center">
 							<Col lg="12" className="p-0">
