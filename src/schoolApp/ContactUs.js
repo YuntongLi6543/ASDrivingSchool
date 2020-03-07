@@ -74,11 +74,14 @@ class ContactUs extends Component {
 		if (this.handleValidation()) {
 
 			window.Email.send({
-				Host : "smtp.gmail.com",
-				Username : "yuntong.li000000@gmail.com",
-				Password : "1234@abcd",
-				To : 'yuntong.li000000@gmail.com',
-				From : "yuntong.li000000@gmail.com",
+				// Host : "smtp.gmail.com",
+				// Username : "yuntong.li000000@gmail.com",
+				// Password : "1234@abcd",
+				Host : "smtp.mail.yahoo.com",
+				Username:"annieyannie@yahoo.com",
+				Password: "yahuyouxiangmima",
+				To : "annieyannie@yahoo.com",
+				From : "annieyannie@yahoo.com",
 				Subject : `Contact us: ${fields['name']} - ${fields['email']}`,
 				Body : `Message: ${fields['message']}`
 			}).then(

@@ -43,6 +43,12 @@ class Courses extends Component {
                                 <p id="intro3">{t('courses.course3Text')}</p>
                             </Container>
                         </div>
+                        <div id="fourthCourse" className="mt-4">
+                            <Container className="mt-2">
+                                <h4 id="courseTitle4" >{t('courses.course4Title')}</h4>
+                                <p id="intro4">{t('courses.course4Text')}</p>
+                            </Container>
+                        </div>
                     </div>
                 </Container>
             </div>
